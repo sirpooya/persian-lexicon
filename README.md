@@ -17,8 +17,8 @@ first 500. These are measured build counts, not estimates of error-free vocabula
 ## Download the full build
 
 For an application that only needs literal corrections, download
-[persian-autocorrect.tsv](https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv)
-and its [SHA-256 file](https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv.sha256).
+[persian-autocorrect.tsv](https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27-r2/persian-autocorrect.tsv)
+and its [SHA-256 file](https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27-r2/persian-autocorrect.tsv.sha256).
 The dated autocorrect release is separate from the original full-build ZIP below.
 
 The complete build is published as
@@ -53,8 +53,8 @@ the build report before running the current verifier.
 
 `dist/persian-autocorrect.tsv` is UTF-8 with exactly `from`, `to`, `match` columns.
 Every correction is a literal row; consumers need no Persian morphology rules.
-The current table has 483,190 rows (630 character rules and 482,560 word rules),
-occupying 28,163,978 bytes.
+The current table has 126,090 rows (630 character rules and 125,460 word rules),
+occupying 6,547,773 bytes.
 
 - `char`: replace the literal input anywhere. Character normalization comes first:
   Arabic ي/ى/ك, tatweel, vowel marks, supported presentation forms, canonical
@@ -62,8 +62,17 @@ occupying 28,163,978 bytes.
   preserved. ZWJ is not deleted globally because it also joins emoji sequences.
 - `word`: replace only a complete word or complete space-separated span, bounded
   by Unicode word boundaries (treat internal ZWNJ as part of a word). Every target
-  is a single token with lexical support and at least one ZWNJ. Variants independently
-  retain, space, or omit each joiner, covering partially incorrect multi-joiner forms.
+  is a single token with lexical support. Every ZWNJ must attach the prefix
+  `می`/`نمی` or one of these suffixes: `ها`/`های`/`هایی`/`هایم`/`هایت`/`هایش`/
+  `هایمان`/`هایتان`/`هایشان`/`تر`/`ترین`/`ام`/`ات`/`اش`/`ای`/`ایم`/`اید`/`اند`.
+  Strip suffix segments from the right and an optional prefix from the left; exactly
+  one stem segment must remain. A target containing any other boundary is excluded
+  entirely, including partially incorrect variants. Eligible variants independently
+  retain, space, or omit each joiner.
+- Free phrases stay spaced: `به صورت`, `به نظر`, `در حال حاضر`, `انجام دادیم`,
+  `داشته باشیم`, `قرار گرفتند`, and `این رو` have no word corrections. The earlier
+  dated release incorrectly joined these; the `-r2` release supersedes it. The affix
+  allowlist is a conservative structural filter, not a complete morphological analysis.
 - Inputs that already have lexical support as words or phrases are protected.
   Thus the supported spelling `میزنیم` is deliberately skipped even though
   `می‌زنیم` is also supported. `لباس تر` has no emitted correction.
@@ -84,8 +93,10 @@ SQLite database without downloading the raw sources:
 .venv/bin/python -I scripts/verify_build.py
 ```
 
-The verifier checks all eligible variants, protected inputs, supported targets,
-unique inputs, frequency ordering, file size and checksum, and prints the row count.
+The verifier checks the affix restriction, all eligible variants, protected inputs,
+supported targets, unique inputs, frequency ordering, file size and checksum, and
+prints the row count. The before/after phrase audit is in
+[`reports/autocorrect-affix-audit.json`](reports/autocorrect-affix-audit.json).
 Publication metadata is recorded in `config/autocorrect-release.json`.
 
 ## Generated files

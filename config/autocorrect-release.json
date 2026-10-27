@@ -1,12 +1,14 @@
 {
-  "tag": "persian-autocorrect-2026.10.27",
+  "tag": "persian-autocorrect-2026.10.27-r2",
   "repository": "sirpooya/persian-lexicon",
-  "asset_url": "https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv",
-  "checksum_url": "https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv.sha256",
-  "sha256": "02857dc341cec338a58c28957219aa3abee1a71e29c6518e3135047295b5cb45",
-  "rows": 483190,
-  "word_rows": 482560,
+  "asset_url": "https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27-r2/persian-autocorrect.tsv",
+  "checksum_url": "https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27-r2/persian-autocorrect.tsv.sha256",
+  "sha256": "a45ea06f557c8c80cb9b9f469e2165ec97d5edb63c61533d92dd90c6de88c97f",
+  "rows": 126090,
+  "word_rows": 125460,
   "char_rows": 630,
-  "bytes": 28163978,
-  "source_lexicon_commit": "45cadaae5add841949e175d6959e8025e80cf388"
+  "bytes": 6547773,
+  "source_lexicon_commit": "45cadaae5add841949e175d6959e8025e80cf388",
+  "supersedes": "persian-autocorrect-2026.10.27",
+  "word_policy": "Every joiner must attach an outer می/نمی prefix or an explicitly allowed suffix; reject targets with any free-word boundary."
 }

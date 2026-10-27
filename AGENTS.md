@@ -20,11 +20,15 @@ coverage: the number of real words. The first consumer is osx-transcribeX's Dict
   remains the authoritative record of build counts and omissions. See README for restore commands.
 - `scripts/autocorrect.py` exports an app-independent UTF-8 correction table with
   exactly `from`, `to`, `match` columns. Character rows are literal normalization;
-  word rows restore ZWNJ only, for core/dictionary single-token targets. Existing
+  word rows restore ZWNJ only, for core/dictionary single-token targets. Every
+  boundary must attach an allowed outer می/نمی prefix or suffix listed in README;
+  reject the entire target if any boundary joins free words. Existing
   supported words and phrases are never emitted as word inputs. Multiple possible
   targets choose highest frequency, with deterministic support/spelling tie breaks.
-- The 2026-10-27 autocorrect table has 483,190 rows (630 char, 482,560 word),
-  28,163,978 bytes. It is published separately at tag `persian-autocorrect-2026.10.27`.
+- The 2026-10-27 autocorrect table has 126,090 rows (630 char, 125,460 word),
+  6,547,773 bytes. It is published separately at tag `persian-autocorrect-2026.10.27-r2`,
+  superseding the original unsafe table. All seven reported free phrases are regression
+  tests; `reports/autocorrect-affix-audit.json` records the before/after audit.
   `config/autocorrect-release.json` records its checksum and download URLs.
   `export_autocorrect.py` regenerates from SQLite; `verify_build.py` checks its
   validity, completeness, protection rules, ordering, size and checksum.

@@ -11,6 +11,28 @@ from pathlib import Path
 from fetch_sources import digest
 from lexicon_core import LETTERS, TRANSLATE, ZWNJ, normalize
 
+PREFIXES = frozenset(('می', 'نمی'))
+SUFFIXES = frozenset(('ها', 'های', 'هایی', 'هایم', 'هایت', 'هایش', 'هایمان',
+                     'هایتان', 'هایشان', 'تر', 'ترین', 'ام', 'ات', 'اش', 'ای',
+                     'ایم', 'اید', 'اند'))
+
+
+def affix_target(word):
+    """Require every ZWNJ to border a listed outer affix, with one stem left.
+
+    Strip suffix segments from the right, then an optional initial verb prefix.
+    An interior free-word boundary disqualifies the entire target, including
+    partially spaced variants. Target support alone does not prove morphology.
+    """
+    parts = word.split(ZWNJ)
+    if len(parts) < 2 or not all(parts) or ' ' in word:
+        return False
+    while len(parts) > 1 and parts[-1] in SUFFIXES:
+        parts.pop()
+    if len(parts) > 1 and parts[0] in PREFIXES:
+        parts.pop(0)
+    return len(parts) == 1
+
 
 def character_rules():
     rules = {}
@@ -57,9 +79,14 @@ def export_autocorrect(db, folder: Path):
       ORDER BY frequency_score DESC,lexical_families DESC,source_count DESC,word''', (ZWNJ,))
     chars = character_rules()
     selected = {}
-    stats = Counter()
+    stats = Counter(supported_half_space_targets=0, eligible_affix_targets=0,
+                    skipped_non_affix_targets=0)
     for target, score in targets:
         stats['supported_half_space_targets'] += 1
+        if not affix_target(target):
+            stats['skipped_non_affix_targets'] += 1
+            continue
+        stats['eligible_affix_targets'] += 1
         for source in variants(target):
             stats['candidate_variants'] += 1
             if source in supported:
@@ -86,7 +113,9 @@ def export_autocorrect(db, folder: Path):
     stats['word_rows'] = len(selected)
     stats['rows'] = len(chars) + len(selected)
     result = {**dict(stats), 'bytes': path.stat().st_size, 'sha256': digest(path),
-              'word_variant_policy': 'Each joiner independently stays ZWNJ, becomes a space, or is removed; exclude unchanged form.',
+              'word_target_policy': 'Every joiner must attach an outer می/نمی prefix or an explicitly allowed suffix; reject targets with any free-word boundary.',
+              'prefixes': sorted(PREFIXES), 'suffixes': sorted(SUFFIXES),
+              'word_variant_policy': 'For eligible affix targets, each joiner independently stays ZWNJ, becomes a space, or is removed; exclude unchanged form.',
               'collision_policy': 'Highest target frequency_score; ties use lexical_families, source_count, then target spelling.',
               'sort_policy': 'Character normalization first; word rules in descending target frequency_score.'}
     path.with_suffix('.tsv.sha256').write_text(result['sha256'] + '  ' + path.name + '\n')
@@ -124,6 +153,7 @@ def verify_autocorrect(db, folder: Path):
                 assert kind == 'word'
                 words_started = True
                 assert target in supported and ZWNJ in target and ' ' not in target, target
+                assert affix_target(target), (source, target, 'non-affix join')
                 assert source not in supported, source
                 # A valid variant may retain some existing half-spaces. Restore
                 # missing/spaced joiners only; never remove one or change letters.
@@ -137,11 +167,14 @@ def verify_autocorrect(db, folder: Path):
     assert sum(counts.values()) == stats['rows'] and path.stat().st_size == stats['bytes']
     # Verify completeness as well as validity: every eligible variant must occur,
     # unless it is protected or the same source chose a higher-frequency target.
-    target_count = 0
+    target_count = eligible_count = 0
     for target, (_, score) in supported.items():
         if ZWNJ not in target or ' ' in target:
             continue
         target_count += 1
+        if not affix_target(target):
+            continue
+        eligible_count += 1
         for source in variants(target):
             if source in supported:
                 assert source not in word_rules
@@ -149,6 +182,8 @@ def verify_autocorrect(db, folder: Path):
                 assert source in word_rules, (source, target, 'missing correction')
                 assert supported[word_rules[source]][1] >= score, (source, 'lower-frequency collision winner')
     assert target_count == stats['supported_half_space_targets']
+    assert eligible_count == stats['eligible_affix_targets']
+    assert target_count - eligible_count == stats.get('skipped_non_affix_targets', 0)
     print(f"persian-autocorrect.tsv: {stats['rows']:,} rows, {stats['bytes']:,} bytes; "
-          'unique sources, supported targets, protected words/phrases and ordering verified.', flush=True)
+          'unique sources, affix-only targets, protected words/phrases and ordering verified.', flush=True)
     return stats

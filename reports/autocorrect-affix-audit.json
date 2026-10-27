@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-27",
+  "tag": "persian-autocorrect-2026.10.27-r2",
+  "previous_sha256": "02857dc341cec338a58c28957219aa3abee1a71e29c6518e3135047295b5cb45",
+  "sha256": "a45ea06f557c8c80cb9b9f469e2165ec97d5edb63c61533d92dd90c6de88c97f",
+  "rows": 126090,
+  "word_rows": 125460,
+  "char_rows": 630,
+  "bytes": 6547773,
+  "supported_half_space_targets": 173261,
+  "eligible_affix_targets": 52507,
+  "skipped_non_affix_targets": 120754,
+  "removed_inputs": 357100,
+  "added_inputs": 0,
+  "retargeted_inputs": 58,
+  "character_rules_unchanged": true,
+  "phrase_regressions": [
+    {
+      "from": "به صورت",
+      "previous_to": "به‌صورت",
+      "new_to": null
+    },
+    {
+      "from": "به نظر",
+      "previous_to": "به‌نظر",
+      "new_to": null
+    },
+    {
+      "from": "در حال حاضر",
+      "previous_to": "در‌حال‌حاضر",
+      "new_to": null
+    },
+    {
+      "from": "انجام دادیم",
+      "previous_to": "انجام‌دادیم",
+      "new_to": null
+    },
+    {
+      "from": "داشته باشیم",
+      "previous_to": "داشته‌باشیم",
+      "new_to": null
+    },
+    {
+      "from": "قرار گرفتند",
+      "previous_to": "قرار‌گرفتند",
+      "new_to": null
+    },
+    {
+      "from": "این رو",
+      "previous_to": "این‌رو",
+      "new_to": null
+    }
+  ],
+  "policy": "Every joiner must attach an outer می/نمی prefix or an explicitly allowed suffix; reject targets with any free-word boundary.",
+  "limitation": "The explicit outer-affix allowlist is a structural filter; lexical support is not complete morphological or contextual validation.",
+  "unit_tests_passed": 20,
+  "full_build_verification_passed": true
+}
