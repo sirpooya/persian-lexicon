@@ -54,5 +54,8 @@
   "policy": "Every joiner must attach an outer می/نمی prefix or an explicitly allowed suffix; reject targets with any free-word boundary.",
   "limitation": "The explicit outer-affix allowlist is a structural filter; lexical support is not complete morphological or contextual validation.",
   "unit_tests_passed": 20,
-  "full_build_verification_passed": true
+  "full_build_verification_passed": true,
+  "published_download_verified": true,
+  "temporary_archive_removed": true,
+  "restored_exports_removed": 11
 }
