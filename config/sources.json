@@ -611,6 +611,26 @@
         }
       ],
       "notes": "Download endpoint returned an HTML page; alternate official vault returned HTTP 401. Data unavailable without repository access."
+    },
+    {
+      "id": "zaya_g2p",
+      "name": "Zaya filtered G2P derivative",
+      "repo": "mohamad-hasan-sohan-ajini/G2P",
+      "revision": "2b51e0676983a131bd7d5aaf235424ab15469e6e",
+      "family": "bijankhan_upc",
+      "role": "lexical",
+      "parser": "zaya_g2p",
+      "files": [
+        {
+          "path": "resources/FA/Lexicon.json",
+          "url": "https://raw.githubusercontent.com/mohamad-hasan-sohan-ajini/G2P/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA/Lexicon.json"
+        },
+        {
+          "path": "resources/FA/README.md",
+          "url": "https://raw.githubusercontent.com/mohamad-hasan-sohan-ajini/G2P/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA/README.md"
+        }
+      ],
+      "notes": "Partial Zaya recovery, filtered for graphemes and phonemes by the upstream G2P project. Extract headwords only; ignore phonetic strings. Conservatively shares the corpus-related UPC family."
     }
   ],
   "unresolved_leads": [
@@ -621,8 +641,9 @@
     },
     {
       "id": "zaya",
-      "status": "unavailable",
-      "reason": "No publicly downloadable dataset verified."
+      "status": "partially_recovered",
+      "reason": "A filtered Zaya-derived G2P lexicon was obtained; the complete original release is still unverified.",
+      "source_id": "zaya_g2p"
     },
     {
       "id": "farsvajeh",

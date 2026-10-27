@@ -7,11 +7,11 @@ The build includes dictionary headwords, morphological forms, word collections a
 corpus observations. These remain distinguishable: a large union contains errors
 as well as useful vocabulary. Source agreement is evidence, not a guarantee of correctness.
 
-The 2026-10-27 build merged **23 available data groups** into **2,852,812 distinct
-entries**: 2,696,928 single tokens and 155,884 phrases. Of the single tokens,
-570,457 have lexical-source support and 46,027 qualify for the conservative core.
-The database retains 6,572,049 source-evidence rows and 547,083 changed spelling
-variants. The review contains 82,552 spacing groups; the priority file shows the
+The 2026-10-27 build merged **24 available data groups** into **2,858,612 distinct
+entries**: 2,702,728 single tokens and 155,884 phrases. Of the single tokens,
+583,539 have lexical-source support and 60,586 qualify for the conservative core.
+The database retains 6,625,012 source-evidence rows and 549,913 changed spelling
+variants. The review contains 83,709 spacing groups; the priority file shows the
 first 500. These are measured build counts, not estimates of error-free vocabulary.
 
 ## Generated files
@@ -118,16 +118,55 @@ rule subset in the pinned Lilak builds and fails on unsupported rule structures.
 The manifest covers Lilak, its Hunspell builds, PersianWordsLib, Hazm, Reza's
 auxiliary lists, Apertium, Uppsala corpus words, word-list-fa, Moein, PerLex,
 OpenSubtitles, Wikipedia and poetry frequencies, wordfreq, FarsNet, the Masterking
-collection, Parsivar, Virastyar, Aspell, Kaikki/Wiktionary and UDLexicons.
+collection, Parsivar, Virastyar, Aspell, Kaikki/Wiktionary, UDLexicons and a filtered
+Zaya derivative from a grapheme-to-phoneme project. Only Zaya headwords are extracted;
+phonetic strings are neither merged words nor frequency counts. This partial recovery
+contributes 5,800 new entries; it is not the complete original Zaya release.
 
 MULTEXT-East's direct download returned a web page and its alternate official
-vault requires access. Vafa, Zaya and FarsVajeh remain leads without verified
-standalone downloads; ELRA requires separate acquisition. Their published counts
-are not counted as merged data. Reza's slang resource contains regex rules and is
-retained as reference data, not treated as a word list.
+vault requires access. Vafa and FarsVajeh remain leads without verified standalone
+downloads; ELRA requires separate acquisition. The original Zaya download returned
+no data. Published counts from these unavailable releases are not added to the build.
+Reza's slang resource contains regex rules and is retained as reference data.
+The [resource recovery report](reports/resource-recovery.md) records the retry results.
+
+## Accuracy on real spelling errors
+
+The [evaluation report](reports/evaluation.md) measures normalized dictionary membership
+on the original FaSpell dataset. Its main file contains 4,858 naturally occurring
+human-error rows; 3,775 distinct normalized single-token pairs qualify for the primary
+comparison. Boundary errors, normalization-only differences and invalid cases are
+reported separately.
+
+| Policy | Correct forms accepted | Erroneous forms rejected | Both decisions correct |
+|---|---:|---:|---:|
+| Core | 90.12% | 92.98% | 83.28% |
+| Dictionary-supported | 96.50% | 77.01% | 73.72% |
+| Full union | 99.63% | 47.10% | 46.81% |
+
+The broad list is useful for coverage and candidate generation; it accepts many
+known error forms. The core offers stronger rejection at the cost of rejecting more
+valid corrections. These measurements do not establish autocorrection accuracy,
+contextual accuracy or behavior on all Persian text. A dataset's erroneous form can
+also be a legitimate word in another context.
+
+FaSpell OCR is evaluated separately. PerSpellData's Virastman real-word subset is
+diagnostic only: spot checks found suspect gold forms and additional edits, while
+real-word errors also need context. Its scores are not used as headline accuracy.
+Upstream overlap with public benchmarks is unknown. Evaluation examples never enter
+the source merge or overrides, and no acceptance rule was tuned on these results.
+
+```sh
+.venv/bin/python -I scripts/fetch_sources.py --manifest config/evaluation-sources.json --lock config/evaluation-sources.lock.json
+.venv/bin/python -I scripts/evaluate_lexicon.py
+```
+
+The evaluator verifies input hashes and writes detailed cases, accepted error forms,
+missing corrections and metrics to `dist/evaluation/`. Small summaries are saved in
+`reports/evaluation.md` and `reports/evaluation.json` for versioned review.
 
 The dictionary is a first combined build, not a validated autocorrect model.
-Hunspell compatibility is checked locally; macOS installation and end-to-end
-dictation cleanup have not been tested. The original research is in
+Hunspell compatibility and dictionary error rejection are checked locally; macOS
+installation and end-to-end dictation cleanup have not been tested. The original research is in
 [AGENTS.md](AGENTS.md), with machine-readable configuration in
 [config/sources.json](config/sources.json).

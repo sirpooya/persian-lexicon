@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "purpose": "Evaluation only. Never merge gold corrections or misspellings into the dictionary.",
+  "sources": [
+    {
+      "id": "faspell_eval",
+      "name": "FAspell original repository",
+      "kind": "naturally_occurring_and_ocr",
+      "parser": "faspell",
+      "page": "https://lindat.mff.cuni.cz/repository/handle/11372/LRT-1547",
+      "files": [
+        {
+          "path": "faspell_main.txt",
+          "url": "https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/b3372b23-965a-4eb2-826b-c9433c42bb20/content"
+        },
+        {
+          "path": "faspell_ocr.txt",
+          "url": "https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/0c220165-7bc0-4236-bcc7-3a10489ee416/content"
+        },
+        {
+          "path": "README.txt",
+          "url": "https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/4dfa1e85-d935-4c86-a041-b47f4ed4c31d/content"
+        }
+      ]
+    },
+    {
+      "id": "perspelldata_eval",
+      "name": "PerSpellData Virastman real-word subset",
+      "kind": "human_derived_confusions_inserted_into_corpus",
+      "parser": "parallel_sentences",
+      "revision": "bcdce3ceaa7b8692569befc45cb3ade2f37dfca0",
+      "page": "https://github.com/rominaoji/PerSpellData",
+      "paper": "https://aclanthology.org/2021.nsurl-1.2/",
+      "files": [
+        {
+          "path": "DataSet/real-word/virastman/correct_virastman_real.txt",
+          "url": "https://raw.githubusercontent.com/rominaoji/PerSpellData/bcdce3ceaa7b8692569befc45cb3ade2f37dfca0/DataSet/real-word/virastman/correct_virastman_real.txt"
+        },
+        {
+          "path": "DataSet/real-word/virastman/wrong_virastman_real.txt",
+          "url": "https://raw.githubusercontent.com/rominaoji/PerSpellData/bcdce3ceaa7b8692569befc45cb3ade2f37dfca0/DataSet/real-word/virastman/wrong_virastman_real.txt"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/rominaoji/PerSpellData/bcdce3ceaa7b8692569befc45cb3ade2f37dfca0/README.md"
+        }
+      ]
+    }
+  ]
+}

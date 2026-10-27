@@ -280,6 +280,17 @@ def hunspell_records(folder: Path, source: dict):
 def records(source: dict):
     folder = ROOT / 'data/raw' / source['id']
     parser = source['parser']
+    if parser == 'zaya_g2p':
+        # This derivative filters Zaya for grapheme-to-phoneme training.
+        # Pronunciation alternatives do not count as extra word evidence.
+        data = json.loads((folder / 'resources/FA/Lexicon.json').read_text())
+        if not isinstance(data, list):
+            raise ValueError('Expected Zaya derivative word/pronunciation rows')
+        for number, row in enumerate(data, 1):
+            if not isinstance(row, list) or len(row) != 2 or not all(isinstance(v, str) for v in row):
+                raise ValueError('Invalid Zaya word/pronunciation row')
+            yield Observation(row[0], location=f'Lexicon.json:{number}')
+        return
     if parser == 'hunspell':
         yield from hunspell_records(folder, source)
         return

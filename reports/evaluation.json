@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-10-27T07:21:04.596361+00:00",
+  "dictionary_sha256": "f69c8958fd2499475f9d2ba8caca828c16e5980c3a445d953f9743f9f2d02548",
+  "manifest_sha256": "73791becba80e5f7e4bdcafc638f57dc78c266ca4023e737eba471270fb69b01",
+  "lock_sha256": "092e75ca43b51cb279ee0d3600072423a41f306d497bd09c36ea5874dcf089c3",
+  "inputs": [
+    {
+      "source": "faspell_eval",
+      "path": "faspell_main.txt",
+      "sha256": "886edb3de2d673ff2719bb56788a9b9f6f2d22815d9cdb72ffede0a845fdfc18",
+      "url": "https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/b3372b23-965a-4eb2-826b-c9433c42bb20/content"
+    },
+    {
+      "source": "faspell_eval",
+      "path": "faspell_ocr.txt",
+      "sha256": "486ee170c10c03b2a74f012b7a5589b53c9a4d8d5338fc7513cf921d49a47045",
+      "url": "https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/0c220165-7bc0-4236-bcc7-3a10489ee416/content"
+    },
+    {
+      "source": "faspell_eval",
+      "path": "README.txt",
+      "sha256": "a4e6b8d1d172e91d53a3cfb43d2e3687f9113716160012e74b343f987866ed3c",
+      "url": "https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/4dfa1e85-d935-4c86-a041-b47f4ed4c31d/content"
+    },
+    {
+      "source": "perspelldata_eval",
+      "path": "DataSet/real-word/virastman/correct_virastman_real.txt",
+      "sha256": "000d80042ea02aa35d5f60e8d64c1250a76d139473df417b3ae10a8bb09e65cb",
+      "url": "https://raw.githubusercontent.com/rominaoji/PerSpellData/bcdce3ceaa7b8692569befc45cb3ade2f37dfca0/DataSet/real-word/virastman/correct_virastman_real.txt"
+    },
+    {
+      "source": "perspelldata_eval",
+      "path": "DataSet/real-word/virastman/wrong_virastman_real.txt",
+      "sha256": "0ec81390cc5f0bbb67d26050614a9aac69854ec3abf15d6339c7ff0862ec77c0",
+      "url": "https://raw.githubusercontent.com/rominaoji/PerSpellData/bcdce3ceaa7b8692569befc45cb3ade2f37dfca0/DataSet/real-word/virastman/wrong_virastman_real.txt"
+    },
+    {
+      "source": "perspelldata_eval",
+      "path": "README.md",
+      "sha256": "010799f5a548b1c607bfc47e23857424fb572176c4529b695aa8f962746a9c48",
+      "url": "https://raw.githubusercontent.com/rominaoji/PerSpellData/bcdce3ceaa7b8692569befc45cb3ade2f37dfca0/README.md"
+    }
+  ],
+  "datasets": {
+    "faspell_main": {
+      "kind": "naturally_occurring_human",
+      "role": "primary_human_errors",
+      "input_rows": 4858,
+      "observations": 4858,
+      "case_classes": {
+        "single_token": 3802,
+        "boundary_or_multiword": 1045,
+        "normalizer_rejects_error:non_persian_character_or_punctuation": 2,
+        "invalid_correct_form:too_long_or_sentence": 1,
+        "unchanged_pair": 4,
+        "resolved_by_normalization": 4
+      },
+      "unique_token_pairs": 3775,
+      "duplicate_token_pairs": 27,
+      "unique_token_pair_metrics": {
+        "core": {
+          "pairs": 3775,
+          "correct_accepted": 3402,
+          "error_accepted": 265,
+          "correct_rejected": 373,
+          "error_rejected": 3510,
+          "pair_separated": 3144,
+          "both_accepted": 258,
+          "both_rejected": 366,
+          "only_error_accepted": 7,
+          "correct_coverage": 0.9011920529801325,
+          "error_rejection": 0.9298013245033112,
+          "error_acceptance": 0.07019867549668875,
+          "correct_false_alarm": 0.09880794701986755,
+          "pair_separation": 0.8328476821192053
+        },
+        "dictionary": {
+          "pairs": 3775,
+          "correct_accepted": 3643,
+          "error_accepted": 868,
+          "correct_rejected": 132,
+          "error_rejected": 2907,
+          "pair_separated": 2783,
+          "both_accepted": 860,
+          "both_rejected": 124,
+          "only_error_accepted": 8,
+          "correct_coverage": 0.9650331125827815,
+          "error_rejection": 0.7700662251655629,
+          "error_acceptance": 0.22993377483443708,
+          "correct_false_alarm": 0.034966887417218546,
+          "pair_separation": 0.7372185430463576
+        },
+        "all": {
+          "pairs": 3775,
+          "correct_accepted": 3761,
+          "error_accepted": 1997,
+          "correct_rejected": 14,
+          "error_rejected": 1778,
+          "pair_separated": 1767,
+          "both_accepted": 1994,
+          "both_rejected": 11,
+          "only_error_accepted": 3,
+          "correct_coverage": 0.9962913907284768,
+          "error_rejection": 0.4709933774834437,
+          "error_acceptance": 0.5290066225165563,
+          "correct_false_alarm": 0.003708609271523179,
+          "pair_separation": 0.4680794701986755
+        }
+      },
+      "by_source_category": {
+        "0": {
+          "core": {
+            "pairs": 51,
+            "correct_accepted": 43,
+            "error_accepted": 3,
+            "correct_rejected": 8,
+            "error_rejected": 48,
+            "pair_separated": 41,
+            "both_accepted": 2,
+            "both_rejected": 7,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.8431372549019608,
+            "error_rejection": 0.9411764705882353,
+            "error_acceptance": 0.058823529411764705,
+            "correct_false_alarm": 0.1568627450980392,
+            "pair_separation": 0.803921568627451
+          },
+          "dictionary": {
+            "pairs": 51,
+            "correct_accepted": 47,
+            "error_accepted": 10,
+            "correct_rejected": 4,
+            "error_rejected": 41,
+            "pair_separated": 38,
+            "both_accepted": 9,
+            "both_rejected": 3,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.9215686274509803,
+            "error_rejection": 0.803921568627451,
+            "error_acceptance": 0.19607843137254902,
+            "correct_false_alarm": 0.0784313725490196,
+            "pair_separation": 0.7450980392156863
+          },
+          "all": {
+            "pairs": 51,
+            "correct_accepted": 49,
+            "error_accepted": 19,
+            "correct_rejected": 2,
+            "error_rejected": 32,
+            "pair_separated": 31,
+            "both_accepted": 18,
+            "both_rejected": 1,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.9607843137254902,
+            "error_rejection": 0.6274509803921569,
+            "error_acceptance": 0.37254901960784315,
+            "correct_false_alarm": 0.0392156862745098,
+            "pair_separation": 0.6078431372549019
+          }
+        },
+        "1": {
+          "core": {
+            "pairs": 3563,
+            "correct_accepted": 3211,
+            "error_accepted": 248,
+            "correct_rejected": 352,
+            "error_rejected": 3315,
+            "pair_separated": 2968,
+            "both_accepted": 243,
+            "both_rejected": 347,
+            "only_error_accepted": 5,
+            "correct_coverage": 0.9012068481616615,
+            "error_rejection": 0.9303957339320797,
+            "error_acceptance": 0.06960426606792029,
+            "correct_false_alarm": 0.09879315183833848,
+            "pair_separation": 0.8330058939096268
+          },
+          "dictionary": {
+            "pairs": 3563,
+            "correct_accepted": 3441,
+            "error_accepted": 823,
+            "correct_rejected": 122,
+            "error_rejected": 2740,
+            "pair_separated": 2624,
+            "both_accepted": 817,
+            "both_rejected": 116,
+            "only_error_accepted": 6,
+            "correct_coverage": 0.9657591916923941,
+            "error_rejection": 0.7690148751052484,
+            "error_acceptance": 0.23098512489475162,
+            "correct_false_alarm": 0.03424080830760595,
+            "pair_separation": 0.736458040976705
+          },
+          "all": {
+            "pairs": 3563,
+            "correct_accepted": 3552,
+            "error_accepted": 1877,
+            "correct_rejected": 11,
+            "error_rejected": 1686,
+            "pair_separated": 1676,
+            "both_accepted": 1876,
+            "both_rejected": 10,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.9969127140050519,
+            "error_rejection": 0.47319674431658715,
+            "error_acceptance": 0.5268032556834129,
+            "correct_false_alarm": 0.0030872859949480774,
+            "pair_separation": 0.47039012068481617
+          }
+        },
+        "2": {
+          "core": {
+            "pairs": 10,
+            "correct_accepted": 9,
+            "error_accepted": 1,
+            "correct_rejected": 1,
+            "error_rejected": 9,
+            "pair_separated": 8,
+            "both_accepted": 1,
+            "both_rejected": 1,
+            "only_error_accepted": 0,
+            "correct_coverage": 0.9,
+            "error_rejection": 0.9,
+            "error_acceptance": 0.1,
+            "correct_false_alarm": 0.1,
+            "pair_separation": 0.8
+          },
+          "dictionary": {
+            "pairs": 10,
+            "correct_accepted": 9,
+            "error_accepted": 3,
+            "correct_rejected": 1,
+            "error_rejected": 7,
+            "pair_separated": 6,
+            "both_accepted": 3,
+            "both_rejected": 1,
+            "only_error_accepted": 0,
+            "correct_coverage": 0.9,
+            "error_rejection": 0.7,
+            "error_acceptance": 0.3,
+            "correct_false_alarm": 0.1,
+            "pair_separation": 0.6
+          },
+          "all": {
+            "pairs": 10,
+            "correct_accepted": 10,
+            "error_accepted": 5,
+            "correct_rejected": 0,
+            "error_rejected": 5,
+            "pair_separated": 5,
+            "both_accepted": 5,
+            "both_rejected": 0,
+            "only_error_accepted": 0,
+            "correct_coverage": 1.0,
+            "error_rejection": 0.5,
+            "error_acceptance": 0.5,
+            "correct_false_alarm": 0.0,
+            "pair_separation": 0.5
+          }
+        },
+        "3": {
+          "core": {
+            "pairs": 154,
+            "correct_accepted": 142,
+            "error_accepted": 13,
+            "correct_rejected": 12,
+            "error_rejected": 141,
+            "pair_separated": 130,
+            "both_accepted": 12,
+            "both_rejected": 11,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.922077922077922,
+            "error_rejection": 0.9155844155844156,
+            "error_acceptance": 0.08441558441558442,
+            "correct_false_alarm": 0.07792207792207792,
+            "pair_separation": 0.8441558441558441
+          },
+          "dictionary": {
+            "pairs": 154,
+            "correct_accepted": 149,
+            "error_accepted": 33,
+            "correct_rejected": 5,
+            "error_rejected": 121,
+            "pair_separated": 117,
+            "both_accepted": 32,
+            "both_rejected": 4,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.9675324675324676,
+            "error_rejection": 0.7857142857142857,
+            "error_acceptance": 0.21428571428571427,
+            "correct_false_alarm": 0.032467532467532464,
+            "pair_separation": 0.7597402597402597
+          },
+          "all": {
+            "pairs": 154,
+            "correct_accepted": 153,
+            "error_accepted": 97,
+            "correct_rejected": 1,
+            "error_rejected": 57,
+            "pair_separated": 57,
+            "both_accepted": 96,
+            "both_rejected": 0,
+            "only_error_accepted": 1,
+            "correct_coverage": 0.9935064935064936,
+            "error_rejection": 0.37012987012987014,
+            "error_acceptance": 0.6298701298701299,
+            "correct_false_alarm": 0.006493506493506494,
+            "pair_separation": 0.37012987012987014
+          }
+        }
+      }
+    },
+    "faspell_ocr": {
+      "kind": "ocr",
+      "role": "secondary_ocr",
+      "input_rows": 800,
+      "observations": 800,
+      "case_classes": {
+        "normalizer_rejects_error:non_persian_character_or_punctuation": 150,
+        "single_token": 620,
+        "boundary_or_multiword": 30
+      },
+      "unique_token_pairs": 617,
+      "duplicate_token_pairs": 3,
+      "unique_token_pair_metrics": {
+        "core": {
+          "pairs": 617,
+          "correct_accepted": 582,
+          "error_accepted": 155,
+          "correct_rejected": 35,
+          "error_rejected": 462,
+          "pair_separated": 432,
+          "both_accepted": 150,
+          "both_rejected": 30,
+          "only_error_accepted": 5,
+          "correct_coverage": 0.9432739059967585,
+          "error_rejection": 0.7487844408427877,
+          "error_acceptance": 0.25121555915721233,
+          "correct_false_alarm": 0.05672609400324149,
+          "pair_separation": 0.700162074554295
+        },
+        "dictionary": {
+          "pairs": 617,
+          "correct_accepted": 597,
+          "error_accepted": 250,
+          "correct_rejected": 20,
+          "error_rejected": 367,
+          "pair_separated": 349,
+          "both_accepted": 248,
+          "both_rejected": 18,
+          "only_error_accepted": 2,
+          "correct_coverage": 0.9675850891410048,
+          "error_rejection": 0.5948136142625607,
+          "error_acceptance": 0.4051863857374392,
+          "correct_false_alarm": 0.03241491085899514,
+          "pair_separation": 0.5656401944894651
+        },
+        "all": {
+          "pairs": 617,
+          "correct_accepted": 611,
+          "error_accepted": 333,
+          "correct_rejected": 6,
+          "error_rejected": 284,
+          "pair_separated": 278,
+          "both_accepted": 333,
+          "both_rejected": 6,
+          "only_error_accepted": 0,
+          "correct_coverage": 0.9902755267423015,
+          "error_rejection": 0.46029173419773095,
+          "error_acceptance": 0.539708265802269,
+          "correct_false_alarm": 0.009724473257698542,
+          "pair_separation": 0.4505672609400324
+        }
+      },
+      "by_source_category": {
+        "ocr": {
+          "core": {
+            "pairs": 617,
+            "correct_accepted": 582,
+            "error_accepted": 155,
+            "correct_rejected": 35,
+            "error_rejected": 462,
+            "pair_separated": 432,
+            "both_accepted": 150,
+            "both_rejected": 30,
+            "only_error_accepted": 5,
+            "correct_coverage": 0.9432739059967585,
+            "error_rejection": 0.7487844408427877,
+            "error_acceptance": 0.25121555915721233,
+            "correct_false_alarm": 0.05672609400324149,
+            "pair_separation": 0.700162074554295
+          },
+          "dictionary": {
+            "pairs": 617,
+            "correct_accepted": 597,
+            "error_accepted": 250,
+            "correct_rejected": 20,
+            "error_rejected": 367,
+            "pair_separated": 349,
+            "both_accepted": 248,
+            "both_rejected": 18,
+            "only_error_accepted": 2,
+            "correct_coverage": 0.9675850891410048,
+            "error_rejection": 0.5948136142625607,
+            "error_acceptance": 0.4051863857374392,
+            "correct_false_alarm": 0.03241491085899514,
+            "pair_separation": 0.5656401944894651
+          },
+          "all": {
+            "pairs": 617,
+            "correct_accepted": 611,
+            "error_accepted": 333,
+            "correct_rejected": 6,
+            "error_rejected": 284,
+            "pair_separated": 278,
+            "both_accepted": 333,
+            "both_rejected": 6,
+            "only_error_accepted": 0,
+            "correct_coverage": 0.9902755267423015,
+            "error_rejection": 0.46029173419773095,
+            "error_acceptance": 0.539708265802269,
+            "correct_false_alarm": 0.009724473257698542,
+            "pair_separation": 0.4505672609400324
+          }
+        }
+      }
+    },
+    "perspelldata_virastman_real": {
+      "kind": "human_derived_real_word_confusions",
+      "role": "diagnostic_only",
+      "input_rows": 7753,
+      "observations": 10882,
+      "case_classes": {
+        "single_token": 9131,
+        "boundary_or_multiword": 1594,
+        "invalid_correct_form:empty": 6,
+        "normalizer_rejects_error:empty": 55,
+        "normalizer_rejects_error:too_long_or_sentence": 1,
+        "invalid_correct_form:too_long_or_sentence": 1,
+        "invalid_correct_form:non_persian_character_or_punctuation": 35,
+        "resolved_by_normalization": 51,
+        "invalid_correct_form:contains_digits": 8
+      },
+      "unique_token_pairs": 3272,
+      "duplicate_token_pairs": 5859,
+      "unique_token_pair_metrics": {
+        "core": {
+          "pairs": 3272,
+          "correct_accepted": 1404,
+          "error_accepted": 1378,
+          "correct_rejected": 1868,
+          "error_rejected": 1894,
+          "pair_separated": 819,
+          "both_accepted": 585,
+          "both_rejected": 1075,
+          "only_error_accepted": 793,
+          "correct_coverage": 0.4290953545232274,
+          "error_rejection": 0.5788508557457213,
+          "error_acceptance": 0.42114914425427874,
+          "correct_false_alarm": 0.5709046454767727,
+          "pair_separation": 0.2503056234718826
+        },
+        "dictionary": {
+          "pairs": 3272,
+          "correct_accepted": 1773,
+          "error_accepted": 1906,
+          "correct_rejected": 1499,
+          "error_rejected": 1366,
+          "pair_separated": 786,
+          "both_accepted": 987,
+          "both_rejected": 580,
+          "only_error_accepted": 919,
+          "correct_coverage": 0.5418704156479217,
+          "error_rejection": 0.41748166259168706,
+          "error_acceptance": 0.5825183374083129,
+          "correct_false_alarm": 0.45812958435207823,
+          "pair_separation": 0.2402200488997555
+        },
+        "all": {
+          "pairs": 3272,
+          "correct_accepted": 2187,
+          "error_accepted": 2553,
+          "correct_rejected": 1085,
+          "error_rejected": 719,
+          "pair_separated": 563,
+          "both_accepted": 1624,
+          "both_rejected": 156,
+          "only_error_accepted": 929,
+          "correct_coverage": 0.668398533007335,
+          "error_rejection": 0.2197432762836186,
+          "error_acceptance": 0.7802567237163814,
+          "correct_false_alarm": 0.331601466992665,
+          "pair_separation": 0.17206601466992666
+        }
+      },
+      "by_source_category": {
+        "replace": {
+          "core": {
+            "pairs": 3272,
+            "correct_accepted": 1404,
+            "error_accepted": 1378,
+            "correct_rejected": 1868,
+            "error_rejected": 1894,
+            "pair_separated": 819,
+            "both_accepted": 585,
+            "both_rejected": 1075,
+            "only_error_accepted": 793,
+            "correct_coverage": 0.4290953545232274,
+            "error_rejection": 0.5788508557457213,
+            "error_acceptance": 0.42114914425427874,
+            "correct_false_alarm": 0.5709046454767727,
+            "pair_separation": 0.2503056234718826
+          },
+          "dictionary": {
+            "pairs": 3272,
+            "correct_accepted": 1773,
+            "error_accepted": 1906,
+            "correct_rejected": 1499,
+            "error_rejected": 1366,
+            "pair_separated": 786,
+            "both_accepted": 987,
+            "both_rejected": 580,
+            "only_error_accepted": 919,
+            "correct_coverage": 0.5418704156479217,
+            "error_rejection": 0.41748166259168706,
+            "error_acceptance": 0.5825183374083129,
+            "correct_false_alarm": 0.45812958435207823,
+            "pair_separation": 0.2402200488997555
+          },
+          "all": {
+            "pairs": 3272,
+            "correct_accepted": 2187,
+            "error_accepted": 2553,
+            "correct_rejected": 1085,
+            "error_rejected": 719,
+            "pair_separated": 563,
+            "both_accepted": 1624,
+            "both_rejected": 156,
+            "only_error_accepted": 929,
+            "correct_coverage": 0.668398533007335,
+            "error_rejection": 0.2197432762836186,
+            "error_acceptance": 0.7802567237163814,
+            "correct_false_alarm": 0.331601466992665,
+            "pair_separation": 0.17206601466992666
+          }
+        }
+      }
+    }
+  },
+  "output_directory": "dist/evaluation",
+  "scope": "dictionary membership, not correction accuracy",
+  "evaluation_data_merged": false,
+  "limitations": [
+    "Unknown overlap between upstream dictionaries and public benchmarks.",
+    "Real-word errors require context; rejection alone is not a spelling truth judgment.",
+    "Boundary errors require tokenization/segmentation and are outside token metrics.",
+    "Repeated pairs are deduplicated; no population error prevalence is assumed.",
+    "Sentence edit alignment is heuristic."
+  ],
+  "artifacts": {
+    "accepted-error-forms.tsv": {
+      "bytes": 3410644,
+      "sha256": "5ebf3298ad013460f5ee2a3ff19cd6787221f9968129b8e605aa779d6f7e3a23"
+    },
+    "cases.tsv": {
+      "bytes": 3459075,
+      "sha256": "76e0fd412187d60c5fec9d57e5ce526f18a52061c6fc60f44cf88e365a6d9164"
+    },
+    "missing-corrections.tsv": {
+      "bytes": 806863,
+      "sha256": "8071b5074442115ea6f50e44c2b8ed81e237acb0f242b1155a6211da1d74eb02"
+    }
+  }
+}

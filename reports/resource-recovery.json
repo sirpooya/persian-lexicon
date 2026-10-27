@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-10-27T07:22:01.300315+00:00",
+  "scope": "Retry the five previously unavailable resources. No contacts, purchases, or account registrations made.",
+  "resources": [
+    {
+      "resource": "zaya",
+      "status": "partially_recovered",
+      "result": "Filtered Zaya derivative retrieved from pinned G2P repository; full original download not verified.",
+      "source_id": "zaya_g2p",
+      "normalized_entries": 52963,
+      "exclusive_entries": 5800,
+      "checks": [
+        {
+          "url": "https://github.com/mohamad-hasan-sohan-ajini/G2P/tree/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA",
+          "outcome": "Downloaded Lexicon.json and README; original project identifies its data as filtered Zaya."
+        },
+        {
+          "url": "https://www.peykaregan.ir/dataset/%D9%88%D8%A7%DA%98%DA%AF%D8%A7%D9%86-%D8%B2%D8%A7%DB%8C%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C",
+          "outcome": "Description accessible; download button points to /node/324?rid=243."
+        },
+        {
+          "url": "https://www.peykaregan.ir/node/324?rid=243",
+          "outcome": "HTTP redirect to download page, then HTTP 200 with empty body; no dataset returned."
+        }
+      ]
+    },
+    {
+      "resource": "multext",
+      "status": "unavailable",
+      "result": "Official download and download-all endpoints returned HTML; inspected GitHub mirror excludes Persian.",
+      "checks": [
+        {
+          "url": "https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1042/wfl-fa.txt.gz?sequence=5&isAllowed=y",
+          "outcome": "Returned XML/XHTML item page, not gzip data."
+        },
+        {
+          "url": "https://www.clarin.si/repository/xmlui/handle/11356/1042/allzip",
+          "outcome": "Returned XML/XHTML rather than ZIP data."
+        },
+        {
+          "url": "https://nl.ijs.si/ME/Vault/V4/lex/",
+          "outcome": "Prior check returned HTTP 401; no access acquired."
+        },
+        {
+          "url": "https://github.com/Kroid/multext-data/tree/a1d692312b89da756a727f302a75f04f48c458c8",
+          "outcome": "Repository contains other languages; its README explicitly lists Persian under separate submission."
+        }
+      ]
+    },
+    {
+      "resource": "vafa",
+      "status": "unavailable",
+      "result": "Original project domain does not resolve; no standalone word list verified via GitHub searches.",
+      "checks": [
+        {
+          "url": "https://www.vafaspellchecker.ir/",
+          "outcome": "DNS lookup failure."
+        },
+        {
+          "url": "https://vafaspellchecker.ir/",
+          "outcome": "DNS lookup failure."
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7256143/",
+          "outcome": "Paper describes dictionary use; no standalone dictionary download verified."
+        }
+      ]
+    },
+    {
+      "resource": "farsvajeh",
+      "status": "unavailable",
+      "result": "Research description verified, but no public release located in exact-name GitHub searches. Owner lab website timed out.",
+      "checks": [
+        {
+          "url": "https://nlp.sbu.ac.ir/",
+          "outcome": "Read timeout."
+        },
+        {
+          "url": "https://lt4all.elra.info/proceedings/lt4all2019/pdf/2019.lt4all-1.73.pdf",
+          "outcome": "Describes FarsVajeh and cites 2017 technical report; no data artifact verified."
+        }
+      ]
+    },
+    {
+      "resource": "elra",
+      "status": "requires_acquisition",
+      "result": "Official catalogue lists an order-based, paid resource. No purchase or registration was made.",
+      "checks": [
+        {
+          "url": "https://catalog.elra.info/en-us/repository/browse/ELRA-L0087/",
+          "outcome": "Catalogue accessible through web search; acquisition options are listed, not an anonymous data download."
+        }
+      ]
+    }
+  ]
+}

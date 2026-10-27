@@ -821,6 +821,26 @@
       "sha256": "bfb503f6b0d6bdddce720ee8154faf1c79d8b0417e6c865643da3b17b7638057",
       "bytes": 147747,
       "fetched_at": "2026-10-27T05:01:54.088346+00:00"
+    },
+    {
+      "source": "zaya_g2p",
+      "path": "resources/FA/Lexicon.json",
+      "url": "https://raw.githubusercontent.com/mohamad-hasan-sohan-ajini/G2P/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA/Lexicon.json",
+      "resolved_url": "https://raw.githubusercontent.com/mohamad-hasan-sohan-ajini/G2P/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA/Lexicon.json",
+      "status": "downloaded",
+      "sha256": "25a17bac307606325705db63466c7a3eac1cc5cf211674f49c16ea71e0d2a11d",
+      "bytes": 2129440,
+      "fetched_at": "2026-10-27T07:14:56.440443+00:00"
+    },
+    {
+      "source": "zaya_g2p",
+      "path": "resources/FA/README.md",
+      "url": "https://raw.githubusercontent.com/mohamad-hasan-sohan-ajini/G2P/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/mohamad-hasan-sohan-ajini/G2P/2b51e0676983a131bd7d5aaf235424ab15469e6e/resources/FA/README.md",
+      "status": "downloaded",
+      "sha256": "ef46310efa1569b97cba2eb0eac17d1e52c663bcb22dd8b56da6298fe5dcf866",
+      "bytes": 904,
+      "fetched_at": "2026-10-27T07:14:53.634672+00:00"
     }
   ]
 }

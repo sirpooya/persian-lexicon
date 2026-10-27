@@ -44,8 +44,11 @@ def fetch_one(source: dict, item: dict, prior: dict) -> dict:
         try:
             validate_download(target, relative.suffix)
             return {**prior, **record, 'status': 'downloaded'}
-        except ValueError as error:
-            return {**prior, **record, 'status': 'unavailable', 'error': str(error)}
+        except ValueError:
+            # A previously mistaken HTML response is not a dataset snapshot.
+            # Retry the server instead of permanently locking the error page.
+            expected = None
+            prior = {}
     temporary = target.with_name(target.name + '.part')
     failures = []
     for url in [item['url'], *item.get('mirrors', [])]:
@@ -77,9 +80,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', action='append', help='Fetch only these source IDs')
     parser.add_argument('--workers', type=int, default=6)
+    parser.add_argument('--manifest', type=Path, default=ROOT / 'config/sources.json')
+    parser.add_argument('--lock', type=Path, default=ROOT / 'config/sources.lock.json')
     args = parser.parse_args()
-    manifest = json.loads((ROOT / 'config/sources.json').read_text())
-    lock_path = ROOT / 'config/sources.lock.json'
+    manifest = json.loads(args.manifest.read_text())
+    lock_path = args.lock
     prior = json.loads(lock_path.read_text()) if lock_path.exists() else {'files': []}
     records = {(r['source'], r['path']): r for r in prior['files']}
     jobs = [(s, f) for s in manifest['sources'] for f in s.get('files', [])
@@ -96,7 +101,7 @@ def main() -> int:
     lock_path.write_text(json.dumps({'schema_version': 1,
                                     'files': sorted(records.values(), key=lambda x: (x['source'], x['path']))},
                                    ensure_ascii=False, indent=2) + '\n')
-    print(f'{len(jobs) - failures}/{len(jobs)} files available. See config/sources.lock.json.')
+    print(f'{len(jobs) - failures}/{len(jobs)} files available. See {lock_path}.')
     return 1 if failures else 0
 
 

@@ -17,13 +17,30 @@ coverage: the number of real words. The first consumer is osx-transcribeX's Dict
   155,884 phrases), with 570,457 dictionary-supported single tokens and 46,027 core
   tokens. Broad coverage includes candidates; these numbers are not counts of verified
   correct words. There are 82,552 spacing-review groups, with 500 prioritized.
-- 23 data groups were imported; Reza's regex-only slang file is reference data.
+- Later 2026-10-27 build partially recovered Zaya through the pinned G2P derivative
+  `mohamad-hasan-sohan-ajini/G2P` (`resources/FA/Lexicon.json`): 52,963 normalized
+  headwords, including 5,800 new entries. The full original Zaya release is still
+  unverified. Current totals: 2,858,612 entries, 2,702,728 single tokens, 155,884
+  phrases, 583,539 dictionary-supported tokens and 60,586 core tokens. There are
+  83,709 spacing-review groups. Actual build counts supersede older survey counts.
+- 24 data groups are now imported; Reza's regex-only slang file is reference data.
   MULTEXT-East returned an HTML page instead of the archive and its alternate official
-  vault requires access. Vafa, Zaya, FarsVajeh and ELRA remain unavailable leads.
+  vault requires access. Vafa, FarsVajeh and ELRA remain unavailable; Zaya is partially
+  recovered. Retry evidence is in `reports/resource-recovery.json`.
 - Additional retrieved sources include FarsNet 2.5 from `arashbehmand/farsnet`, the
   `masterking32/persian-wordlist` SQL data, and Persian UDLexicons from
   `https://pauillac.inria.fr/~sagot/UDLexicons.0.2.zip`. SQL is parsed, never executed.
 - See README for build commands, export meanings and manual correction instructions.
+- Dictionary evaluation is implemented in `scripts/evaluate_lexicon.py`, with a
+  separate manifest and lock at `config/evaluation-sources*.json`. These files are
+  evaluation-only and must never be added to the dictionary source manifest.
+- On 3,775 distinct normalized FaSpell human-error token pairs, core coverage/error
+  rejection is 90.12%/92.98%; dictionary-supported 96.50%/77.01%; full union
+  99.63%/47.10%. These are membership measures, not automatic correction accuracy.
+  Details, exclusions and input hashes are in `reports/evaluation.md` and `.json`.
+- PerSpellData Virastman real-word data is diagnostic only. Suspect gold forms such
+  as `سوم` → `سوءم` were found in its correct-file column, and real-word errors need
+  context. Do not use its scores as headline accuracy or turn its pairs into overrides.
 
 ## Sources (surveyed 2026-10-27)
 Counts are lines or entries as shipped, before normalization or cross-source
@@ -138,5 +155,6 @@ canonical ZWNJ-preserving spelling separate from permissive lookup variants.
   spacing variants, not every possible misspelling.
 - The core requires two lexical families or explicit user acceptance. It is corroborated,
   not manually certified. The broad union retains noisy and generated candidates.
-- macOS installation, autocorrect integration and held-out linguistic evaluation remain
-  future work; do not describe those as tested merely because the data build succeeds.
+- macOS installation and autocorrect integration remain future work. Public benchmark
+  evaluation now exists, but upstream overlap is unknown and a context-aware held-out
+  evaluation is still needed. Do not call membership scores autocorrect accuracy.
