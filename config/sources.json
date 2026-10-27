@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "lilak",
+      "name": "Lilak lexicon and user words",
+      "repo": "b00f/lilak",
+      "revision": "4f1f426113e764ea099865232fd5e0fa34563c60",
+      "family": "community_spell",
+      "role": "lexical",
+      "parser": "lilak",
+      "files": [
+        {
+          "path": "src/data/lexicon",
+          "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/lexicon"
+        },
+        {
+          "path": "src/data/dic_users",
+          "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/dic_users"
+        },
+        {
+          "path": "src/data/affixes",
+          "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/affixes"
+        },
+        {
+          "path": "src/data/verbs.htm",
+          "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/verbs.htm"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "lilak_hunspell",
+      "name": "Lilak Hunspell stems",
+      "repo": "wooorm/dictionaries",
+      "revision": "8cfea406b505e4d7df52d5a19bce525df98c54ab",
+      "family": "community_spell",
+      "role": "lexical",
+      "parser": "hunspell",
+      "files": [
+        {
+          "path": "dictionaries/fa/index.dic",
+          "url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/index.dic"
+        },
+        {
+          "path": "dictionaries/fa/index.aff",
+          "url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/index.aff"
+        },
+        {
+          "path": "dictionaries/fa/license",
+          "url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/license"
+        }
+      ],
+      "expand": true
+    },
+    {
+      "id": "mnk",
+      "name": "PersianWordsLib",
+      "repo": "masoudnk/PersianWordsLib",
+      "revision": "5dd86e541aca93cd75edbcdacca4901f1ab709bd",
+      "family": "mnk",
+      "role": "collection",
+      "parser": "mnk",
+      "files": [
+        {
+          "path": "mnk_persian_words/data/words.db.zip",
+          "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/mnk_persian_words/data/words.db.zip"
+        },
+        {
+          "path": "DATASET_MANIFEST.json",
+          "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/DATASET_MANIFEST.json"
+        },
+        {
+          "path": "DATA_SOURCES.md",
+          "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/DATA_SOURCES.md"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "hazm",
+      "name": "Hazm vocabulary",
+      "repo": "roshan-research/hazm",
+      "revision": "a399c8293c5165544aaef76ead78bda9f4275888",
+      "family": "hazm_virastyar",
+      "role": "lexical",
+      "parser": "hazm",
+      "files": [
+        {
+          "path": "hazm/data/words.dat",
+          "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/words.dat"
+        },
+        {
+          "path": "hazm/data/verbs.dat",
+          "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/verbs.dat"
+        },
+        {
+          "path": "hazm/data/iwords.dat",
+          "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/iwords.dat"
+        },
+        {
+          "path": "hazm/data/iverbs.dat",
+          "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/iverbs.dat"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "reza",
+      "name": "Persian-Spell-checker stems",
+      "repo": "reza1615/Persian-Spell-checker",
+      "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
+      "family": "community_spell",
+      "role": "lexical",
+      "parser": "hunspell",
+      "files": [
+        {
+          "path": "fa_IR.dic",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/fa_IR.dic"
+        },
+        {
+          "path": "fa_IR.aff",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/fa_IR.aff"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/README.md"
+        }
+      ],
+      "expand": true
+    },
+    {
+      "id": "reza_lists",
+      "name": "Persian-Spell-checker auxiliary lists",
+      "repo": "reza1615/Persian-Spell-checker",
+      "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
+      "family": "community_spell",
+      "role": "lexical",
+      "parser": "lines",
+      "files": [
+        {
+          "path": "Adjectives",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Adjectives"
+        },
+        {
+          "path": "Moin_Key_Words",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Moin_Key_Words"
+        },
+        {
+          "path": "Persian Verbs List",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Persian%20Verbs%20List"
+        },
+        {
+          "path": "PersianWordsWithA.txt",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/PersianWordsWithA.txt"
+        },
+        {
+          "path": "Words with أ",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A3"
+        },
+        {
+          "path": "Words with ؤ",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A4"
+        }
+      ]
+    },
+    {
+      "id": "reza_corpus",
+      "name": "Persian-Spell-checker corpus words",
+      "repo": "reza1615/Persian-Spell-checker",
+      "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
+      "family": "wikipedia_news",
+      "role": "frequency",
+      "parser": "reza_corpus",
+      "files": [
+        {
+          "path": "Word_collection_1",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Word_collection_1"
+        },
+        {
+          "path": "LT/کلمات+تکرار.txt",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/LT/%DA%A9%D9%84%D9%85%D8%A7%D8%AA%2B%D8%AA%DA%A9%D8%B1%D8%A7%D8%B1.txt"
+        }
+      ]
+    },
+    {
+      "id": "reza_slang",
+      "name": "Persian-Spell-checker colloquial verbs",
+      "repo": "reza1615/Persian-Spell-checker",
+      "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
+      "family": "community_spell",
+      "role": "colloquial",
+      "parser": "lines",
+      "files": [
+        {
+          "path": "Slangy persian verbs.txt",
+          "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Slangy%20persian%20verbs.txt"
+        }
+      ]
+    },
+    {
+      "id": "apertium",
+      "name": "Apertium Iranian Persian",
+      "repo": "apertium/apertium-pes",
+      "revision": "16757db6a56aca9ab8b7c9391ebbaf8c1f939604",
+      "family": "apertium",
+      "role": "lexical",
+      "parser": "apertium",
+      "files": [
+        {
+          "path": "apertium-pes.pes.dix",
+          "url": "https://raw.githubusercontent.com/apertium/apertium-pes/16757db6a56aca9ab8b7c9391ebbaf8c1f939604/apertium-pes.pes.dix"
+        },
+        {
+          "path": "COPYING",
+          "url": "https://raw.githubusercontent.com/apertium/apertium-pes/16757db6a56aca9ab8b7c9391ebbaf8c1f939604/COPYING"
+        }
+      ],
+      "expand": true
+    },
+    {
+      "id": "upc",
+      "name": "Uppsala corpus word list",
+      "repo": "samanvp/persian-lexicon",
+      "revision": "93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6",
+      "family": "bijankhan_upc",
+      "role": "collection",
+      "parser": "lines",
+      "files": [
+        {
+          "path": "data/persian-words.txt",
+          "url": "https://raw.githubusercontent.com/samanvp/persian-lexicon/93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6/data/persian-words.txt"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/samanvp/persian-lexicon/93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "word_list_fa",
+      "name": "word-list-fa",
+      "repo": "mvalipour/word-list-fa",
+      "revision": "7e24c4fae0abd243b1cc7429c921d96e9f226409",
+      "family": "word_list_fa",
+      "role": "collection",
+      "parser": "lines",
+      "files": [
+        {
+          "path": "words.txt",
+          "url": "https://raw.githubusercontent.com/mvalipour/word-list-fa/7e24c4fae0abd243b1cc7429c921d96e9f226409/words.txt"
+        },
+        {
+          "path": "license",
+          "url": "https://raw.githubusercontent.com/mvalipour/word-list-fa/7e24c4fae0abd243b1cc7429c921d96e9f226409/license"
+        }
+      ]
+    },
+    {
+      "id": "moein",
+      "name": "Moein headwords and synonyms headwords",
+      "repo": "MansourM/persian-to-persian-dictionary",
+      "revision": "c3314011ec70e651adb38f3e98474f6614d5de04",
+      "family": "moein",
+      "role": "lexical",
+      "parser": "lines",
+      "files": [
+        {
+          "path": "moein/words.txt",
+          "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/moein/words.txt"
+        },
+        {
+          "path": "moteradef-motezad/dictionary-words-only.txt",
+          "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/moteradef-motezad/dictionary-words-only.txt"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "perlex",
+      "name": "PerLex Perso-Arabic lemmas",
+      "repo": "behnam/perlex_transliterator",
+      "revision": "8cd03038925f949c1f6a9391dfbcca8e51d114e7",
+      "family": "perlex_multext",
+      "role": "lexical",
+      "parser": "perlex",
+      "files": [
+        {
+          "path": "persoarabic/ADJ.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/ADJ.ilex"
+        },
+        {
+          "path": "persoarabic/ADV.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/ADV.ilex"
+        },
+        {
+          "path": "persoarabic/AR.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/AR.ilex"
+        },
+        {
+          "path": "persoarabic/CON.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/CON.ilex"
+        },
+        {
+          "path": "persoarabic/DELM.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/DELM.ilex"
+        },
+        {
+          "path": "persoarabic/DET.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/DET.ilex"
+        },
+        {
+          "path": "persoarabic/IF.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/IF.ilex"
+        },
+        {
+          "path": "persoarabic/INT.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/INT.ilex"
+        },
+        {
+          "path": "persoarabic/MORP.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MORP.ilex"
+        },
+        {
+          "path": "persoarabic/MQUA.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MQUA.ilex"
+        },
+        {
+          "path": "persoarabic/MS.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MS.ilex"
+        },
+        {
+          "path": "persoarabic/N.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/N.ilex"
+        },
+        {
+          "path": "persoarabic/NP.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/NP.ilex"
+        },
+        {
+          "path": "persoarabic/OH.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/OH.ilex"
+        },
+        {
+          "path": "persoarabic/OHH.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/OHH.ilex"
+        },
+        {
+          "path": "persoarabic/P.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/P.ilex"
+        },
+        {
+          "path": "persoarabic/PP.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PP.ilex"
+        },
+        {
+          "path": "persoarabic/PRO.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PRO.ilex"
+        },
+        {
+          "path": "persoarabic/PS.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PS.ilex"
+        },
+        {
+          "path": "persoarabic/QUA.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/QUA.ilex"
+        },
+        {
+          "path": "persoarabic/SPEC.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/SPEC.ilex"
+        },
+        {
+          "path": "persoarabic/V.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/V.ilex"
+        },
+        {
+          "path": "persoarabic/addons.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/addons.ilex"
+        },
+        {
+          "path": "persoarabic/cities.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/cities.ilex"
+        },
+        {
+          "path": "persoarabic/countries.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/countries.ilex"
+        },
+        {
+          "path": "persoarabic/person_names.ilex",
+          "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/person_names.ilex"
+        }
+      ]
+    },
+    {
+      "id": "subtitles",
+      "name": "OpenSubtitles Persian frequencies 2018",
+      "repo": "hermitdave/FrequencyWords",
+      "revision": "525f9b560de45753a5ea01069454e72e9aa541c6",
+      "family": "subtitles",
+      "role": "frequency",
+      "parser": "frequency",
+      "files": [
+        {
+          "path": "content/2018/fa/fa_full.txt",
+          "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/525f9b560de45753a5ea01069454e72e9aa541c6/content/2018/fa/fa_full.txt"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/525f9b560de45753a5ea01069454e72e9aa541c6/README.md"
+        }
+      ]
+    },
+    {
+      "id": "wikipedia",
+      "name": "Persian Wikipedia frequencies",
+      "repo": "behnam/persian-words-frequency",
+      "revision": "c08d07f6817d2ba589f5d7287abcc3fcc5027c99",
+      "family": "wikipedia_news",
+      "role": "frequency",
+      "parser": "behnam",
+      "files": [
+        {
+          "path": "persian-wikipedia.txt",
+          "url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/persian-wikipedia.txt"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/README.md"
+        }
+      ]
+    },
+    {
+      "id": "poetry",
+      "name": "Rira classical poetry frequencies",
+      "repo": "behnam/persian-words-frequency",
+      "revision": "c08d07f6817d2ba589f5d7287abcc3fcc5027c99",
+      "family": "rira_poetry",
+      "role": "frequency",
+      "parser": "behnam",
+      "files": [
+        {
+          "path": "rira-classic-poems.txt",
+          "url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/rira-classic-poems.txt"
+        }
+      ]
+    },
+    {
+      "id": "wordfreq",
+      "name": "wordfreq Persian frequency estimates",
+      "repo": "rspeer/wordfreq",
+      "revision": "912caf64b657478d1dff1138efdc078947d54bb1",
+      "family": "mixed_corpora",
+      "role": "frequency",
+      "parser": "wordfreq",
+      "files": [
+        {
+          "path": "wordfreq/data/small_fa.msgpack.gz",
+          "url": "https://raw.githubusercontent.com/rspeer/wordfreq/912caf64b657478d1dff1138efdc078947d54bb1/wordfreq/data/small_fa.msgpack.gz"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/rspeer/wordfreq/912caf64b657478d1dff1138efdc078947d54bb1/README.md"
+        }
+      ]
+    },
+    {
+      "id": "farsnet",
+      "name": "FarsNet 2.5 lexical database",
+      "repo": "arashbehmand/farsnet",
+      "revision": "bddc9de33191e70121aa06d8c21869d401411114",
+      "family": "farsnet",
+      "role": "lexical",
+      "parser": "farsnet",
+      "files": [
+        {
+          "path": "farsnet/farsnet2.5.db3",
+          "url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/farsnet/farsnet2.5.db3"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "masterking",
+      "name": "Persian wordlist SQL",
+      "repo": "masterking32/persian-wordlist",
+      "revision": "d0e3d9819caaee99143d94e77a65ae41403e7fef",
+      "family": "masterking",
+      "role": "collection",
+      "parser": "sql",
+      "files": [
+        {
+          "path": "words.sql",
+          "url": "https://raw.githubusercontent.com/masterking32/persian-wordlist/d0e3d9819caaee99143d94e77a65ae41403e7fef/words.sql"
+        },
+        {
+          "path": "README.MD",
+          "url": "https://raw.githubusercontent.com/masterking32/persian-wordlist/d0e3d9819caaee99143d94e77a65ae41403e7fef/README.MD"
+        }
+      ]
+    },
+    {
+      "id": "parsivar",
+      "name": "Parsivar spell unigram counts",
+      "family": "parsivar_corpus",
+      "role": "frequency",
+      "parser": "parsivar",
+      "files": [
+        {
+          "path": "spell.zip",
+          "url": "https://www.dropbox.com/s/tlyvnzv1ha9y1kl/spell.zip?dl=1",
+          "mirrors": [
+            "https://dl.dropboxusercontent.com/s/tlyvnzv1ha9y1kl/spell.zip"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "virastyar",
+      "name": "Virastyar dictionary 1.3.1",
+      "family": "hazm_virastyar",
+      "role": "lexical",
+      "parser": "virastyar",
+      "files": [
+        {
+          "path": "persian.dic",
+          "url": "https://sourceforge.net/projects/virastyar/files/Data/1.3.1/persian.dic/download",
+          "mirrors": [
+            "https://downloads.sourceforge.net/project/virastyar/Data/1.3.1/persian.dic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aspell",
+      "name": "GNU Aspell Persian 0.11",
+      "family": "aspell",
+      "role": "lexical",
+      "parser": "aspell",
+      "files": [
+        {
+          "path": "aspell-fa.tar.bz2",
+          "url": "https://ftp.gnu.org/gnu/aspell/dict/fa/aspell6-fa-0.11-0.tar.bz2",
+          "mirrors": [
+            "https://deb.debian.org/debian/pool/main/a/aspell-fa/aspell-fa_0.11-0.orig.tar.bz2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaikki",
+      "name": "Kaikki Persian Wiktionary snapshot",
+      "family": "wiktionary",
+      "role": "lexical",
+      "parser": "kaikki",
+      "files": [
+        {
+          "path": "persian.jsonl",
+          "url": "https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl"
+        }
+      ]
+    },
+    {
+      "id": "udlexicons",
+      "name": "UDLexicons PerLex surface forms",
+      "family": "perlex_multext",
+      "role": "lexical",
+      "parser": "udlexicons",
+      "files": [
+        {
+          "path": "udlexicons.zip",
+          "url": "https://atoll.inria.fr/~sagot/UDLexicons.0.2.zip"
+        }
+      ]
+    },
+    {
+      "id": "multext",
+      "name": "MULTEXT-East Persian",
+      "family": "perlex_multext",
+      "role": "lexical",
+      "parser": "multext",
+      "files": [
+        {
+          "path": "wfl-fa.txt.gz",
+          "url": "https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1042/wfl-fa.txt.gz?sequence=5&isAllowed=n"
+        }
+      ]
+    }
+  ],
+  "unresolved_leads": [
+    {
+      "id": "vafa",
+      "status": "unavailable",
+      "reason": "Paper reports a dictionary; no standalone download verified."
+    },
+    {
+      "id": "zaya",
+      "status": "unavailable",
+      "reason": "No publicly downloadable dataset verified."
+    },
+    {
+      "id": "farsvajeh",
+      "status": "unavailable",
+      "reason": "No publicly downloadable dataset verified."
+    },
+    {
+      "id": "elra",
+      "status": "unavailable",
+      "reason": "Acquisition required; not included in an unattended build."
+    }
+  ]
+}
