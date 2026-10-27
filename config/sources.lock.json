@@ -1,0 +1,826 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "source": "apertium",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/apertium/apertium-pes/16757db6a56aca9ab8b7c9391ebbaf8c1f939604/COPYING",
+      "resolved_url": "https://raw.githubusercontent.com/apertium/apertium-pes/16757db6a56aca9ab8b7c9391ebbaf8c1f939604/COPYING",
+      "status": "downloaded",
+      "sha256": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227",
+      "bytes": 35148,
+      "fetched_at": "2026-10-27T05:01:45.029410+00:00"
+    },
+    {
+      "source": "apertium",
+      "path": "apertium-pes.pes.dix",
+      "url": "https://raw.githubusercontent.com/apertium/apertium-pes/16757db6a56aca9ab8b7c9391ebbaf8c1f939604/apertium-pes.pes.dix",
+      "resolved_url": "https://raw.githubusercontent.com/apertium/apertium-pes/16757db6a56aca9ab8b7c9391ebbaf8c1f939604/apertium-pes.pes.dix",
+      "status": "downloaded",
+      "sha256": "7b24269aeaea4e941ec719a44afaaa5c62dfa3e8244646ecfedc4071fb8680de",
+      "bytes": 1006385,
+      "fetched_at": "2026-10-27T05:01:46.083218+00:00"
+    },
+    {
+      "source": "aspell",
+      "path": "aspell-fa.tar.bz2",
+      "url": "https://ftp.gnu.org/gnu/aspell/dict/fa/aspell6-fa-0.11-0.tar.bz2",
+      "resolved_url": "https://ftp.gnu.org/gnu/aspell/dict/fa/aspell6-fa-0.11-0.tar.bz2",
+      "status": "downloaded",
+      "sha256": "482d26ea879a8ea02d9373952205f67e07c85a7550841b13b5079bb2f9f2e15b",
+      "bytes": 137889,
+      "fetched_at": "2026-10-27T05:02:01.676870+00:00"
+    },
+    {
+      "source": "farsnet",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/LICENSE",
+      "status": "downloaded",
+      "sha256": "bb503eddc4886ea587c5970c584c39e21208b2cf301621a3d490a476eb7437c8",
+      "bytes": 1070,
+      "fetched_at": "2026-10-27T05:01:55.447305+00:00"
+    },
+    {
+      "source": "farsnet",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/README.md",
+      "status": "downloaded",
+      "sha256": "6da853dd4d9f70f9bd459dc499d07cb85def579219856f1994115c1d26693457",
+      "bytes": 1185,
+      "fetched_at": "2026-10-27T05:01:54.729305+00:00"
+    },
+    {
+      "source": "farsnet",
+      "path": "farsnet/farsnet2.5.db3",
+      "url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/farsnet/farsnet2.5.db3",
+      "resolved_url": "https://raw.githubusercontent.com/arashbehmand/farsnet/bddc9de33191e70121aa06d8c21869d401411114/farsnet/farsnet2.5.db3",
+      "status": "downloaded",
+      "sha256": "f6147be2b336f5cc49e025f1cc2c251eeb7165bcb6528c5124accb3b9ffcdc3a",
+      "bytes": 26362880,
+      "fetched_at": "2026-10-27T05:02:19.899519+00:00"
+    },
+    {
+      "source": "hazm",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/LICENSE",
+      "status": "downloaded",
+      "sha256": "5acd1bd6a100e111160be714b374f7d3dcc0e3fc959aaddb92e8e893fbf2d62e",
+      "bytes": 1083,
+      "fetched_at": "2026-10-27T05:01:41.231186+00:00"
+    },
+    {
+      "source": "hazm",
+      "path": "hazm/data/iverbs.dat",
+      "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/iverbs.dat",
+      "resolved_url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/iverbs.dat",
+      "status": "downloaded",
+      "sha256": "492d807e561d7c916160b4e91c826371e19aa4c9e87a64391434ce75a59f0429",
+      "bytes": 2131,
+      "fetched_at": "2026-10-27T05:01:41.187622+00:00"
+    },
+    {
+      "source": "hazm",
+      "path": "hazm/data/iwords.dat",
+      "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/iwords.dat",
+      "resolved_url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/iwords.dat",
+      "status": "downloaded",
+      "sha256": "748e1aaeda091481cdea05bd0daddb736c5ba6ce7c0f8f31501df3098b227f5f",
+      "bytes": 7705,
+      "fetched_at": "2026-10-27T05:01:40.541637+00:00"
+    },
+    {
+      "source": "hazm",
+      "path": "hazm/data/verbs.dat",
+      "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/verbs.dat",
+      "resolved_url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/verbs.dat",
+      "status": "downloaded",
+      "sha256": "37e07804cb52d2afe03ccb5484c6d5e4cd0595f3e4684f3d10df23d90c6ae4d6",
+      "bytes": 13498,
+      "fetched_at": "2026-10-27T05:01:40.560018+00:00"
+    },
+    {
+      "source": "hazm",
+      "path": "hazm/data/words.dat",
+      "url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/words.dat",
+      "resolved_url": "https://raw.githubusercontent.com/roshan-research/hazm/a399c8293c5165544aaef76ead78bda9f4275888/hazm/data/words.dat",
+      "status": "downloaded",
+      "sha256": "e9e212a774beb05c1bfe2fe7646d068e11e093f78696fc23fbbc2baa2b795fe1",
+      "bytes": 3396078,
+      "fetched_at": "2026-10-27T05:01:44.196132+00:00"
+    },
+    {
+      "source": "kaikki",
+      "path": "persian.jsonl",
+      "url": "https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl",
+      "resolved_url": "https://kaikki.org/dictionary/Persian/kaikki.org-dictionary-Persian.jsonl",
+      "status": "downloaded",
+      "sha256": "c5fda57f5593fc256570a5e146c4ac5b6b239906aae781eca1d02b2022a03482",
+      "bytes": 95770880,
+      "fetched_at": "2026-10-27T05:03:27.038366+00:00"
+    },
+    {
+      "source": "lilak",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/LICENSE",
+      "status": "downloaded",
+      "sha256": "ec278dcf6107f7e09e3ba2248494cb1c4063e78453af1ed28443d48739d9971f",
+      "bytes": 583,
+      "fetched_at": "2026-10-27T05:01:38.482380+00:00"
+    },
+    {
+      "source": "lilak",
+      "path": "src/data/affixes",
+      "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/affixes",
+      "resolved_url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/affixes",
+      "status": "downloaded",
+      "sha256": "ac6de89acb947263bf9e32ae312cb8042fec82b9ec7df95d6947ffa65b8ccf25",
+      "bytes": 5344,
+      "fetched_at": "2026-10-27T05:01:38.465119+00:00"
+    },
+    {
+      "source": "lilak",
+      "path": "src/data/dic_users",
+      "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/dic_users",
+      "resolved_url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/dic_users",
+      "status": "downloaded",
+      "sha256": "c15bb74d22e3dc5ad056b1bbaf26f2f8f8ff408e1578d2f96903e1ce400be221",
+      "bytes": 234864,
+      "fetched_at": "2026-10-27T05:01:39.013417+00:00"
+    },
+    {
+      "source": "lilak",
+      "path": "src/data/lexicon",
+      "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/lexicon",
+      "resolved_url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/lexicon",
+      "status": "downloaded",
+      "sha256": "4eeb621442cf38d6d9aac2923daced2b8ae17c770773a7260a02f3c3957daff6",
+      "bytes": 2705844,
+      "fetched_at": "2026-10-27T05:01:40.989628+00:00"
+    },
+    {
+      "source": "lilak",
+      "path": "src/data/verbs.htm",
+      "url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/verbs.htm",
+      "resolved_url": "https://raw.githubusercontent.com/b00f/lilak/4f1f426113e764ea099865232fd5e0fa34563c60/src/data/verbs.htm",
+      "status": "downloaded",
+      "sha256": "c6472c827c92ca5d41eff7405a033077e0669c50725b0388fadabd5049f4cd00",
+      "bytes": 55246,
+      "fetched_at": "2026-10-27T05:01:38.625622+00:00"
+    },
+    {
+      "source": "lilak_hunspell",
+      "path": "dictionaries/fa/index.aff",
+      "url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/index.aff",
+      "resolved_url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/index.aff",
+      "status": "downloaded",
+      "sha256": "dba0980816354ad969aa46dda0c040eeebda4a9381be331e17eae8647a2a1e1c",
+      "bytes": 5440,
+      "fetched_at": "2026-10-27T05:01:39.094580+00:00"
+    },
+    {
+      "source": "lilak_hunspell",
+      "path": "dictionaries/fa/index.dic",
+      "url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/index.dic",
+      "resolved_url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/index.dic",
+      "status": "downloaded",
+      "sha256": "314f31e059994f26e8016c834b14dfd10f74834b3f623a6040265b8f2a9dddab",
+      "bytes": 2575990,
+      "fetched_at": "2026-10-27T05:01:41.083283+00:00"
+    },
+    {
+      "source": "lilak_hunspell",
+      "path": "dictionaries/fa/license",
+      "url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/license",
+      "resolved_url": "https://raw.githubusercontent.com/wooorm/dictionaries/8cfea406b505e4d7df52d5a19bce525df98c54ab/dictionaries/fa/license",
+      "status": "downloaded",
+      "sha256": "7429736f069a84049bcfbee436e5cea3a3fd9b98348d880d9e43ebcf39721989",
+      "bytes": 582,
+      "fetched_at": "2026-10-27T05:01:39.101704+00:00"
+    },
+    {
+      "source": "masterking",
+      "path": "README.MD",
+      "url": "https://raw.githubusercontent.com/masterking32/persian-wordlist/d0e3d9819caaee99143d94e77a65ae41403e7fef/README.MD",
+      "resolved_url": "https://raw.githubusercontent.com/masterking32/persian-wordlist/d0e3d9819caaee99143d94e77a65ae41403e7fef/README.MD",
+      "status": "downloaded",
+      "sha256": "dc0004adb06fa2e155dad7922b0cae3a151d329d0b49fa3bb32a1b3f93549897",
+      "bytes": 1495,
+      "fetched_at": "2026-10-27T05:01:56.100354+00:00"
+    },
+    {
+      "source": "masterking",
+      "path": "words.sql",
+      "url": "https://raw.githubusercontent.com/masterking32/persian-wordlist/d0e3d9819caaee99143d94e77a65ae41403e7fef/words.sql",
+      "resolved_url": "https://raw.githubusercontent.com/masterking32/persian-wordlist/d0e3d9819caaee99143d94e77a65ae41403e7fef/words.sql",
+      "status": "downloaded",
+      "sha256": "1b05272c07d496e33beaf393163e6415e2d650e237d8298ddbe5db80c6244af6",
+      "bytes": 25467831,
+      "fetched_at": "2026-10-27T05:02:19.513433+00:00"
+    },
+    {
+      "source": "mnk",
+      "path": "DATASET_MANIFEST.json",
+      "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/DATASET_MANIFEST.json",
+      "resolved_url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/DATASET_MANIFEST.json",
+      "status": "downloaded",
+      "sha256": "9b31298bcfb354d282e7ae3c762de957635c6d0e48cd29c92dbbe731d4defcbe",
+      "bytes": 1034,
+      "fetched_at": "2026-10-27T05:01:39.846004+00:00"
+    },
+    {
+      "source": "mnk",
+      "path": "DATA_SOURCES.md",
+      "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/DATA_SOURCES.md",
+      "resolved_url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/DATA_SOURCES.md",
+      "status": "downloaded",
+      "sha256": "58e3cba70bdfa910b61f01aa41373fbec3a15923a0c36b5ef92c2ae9b344a6c2",
+      "bytes": 1676,
+      "fetched_at": "2026-10-27T05:01:39.846169+00:00"
+    },
+    {
+      "source": "mnk",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/LICENSE",
+      "status": "downloaded",
+      "sha256": "a2100a262c05d272b840b5f370a832d5788a1bf6b3679042b823b60096400802",
+      "bytes": 1080,
+      "fetched_at": "2026-10-27T05:01:39.883350+00:00"
+    },
+    {
+      "source": "mnk",
+      "path": "mnk_persian_words/data/words.db.zip",
+      "url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/mnk_persian_words/data/words.db.zip",
+      "resolved_url": "https://raw.githubusercontent.com/masoudnk/PersianWordsLib/5dd86e541aca93cd75edbcdacca4901f1ab709bd/mnk_persian_words/data/words.db.zip",
+      "status": "downloaded",
+      "sha256": "9e52b52cad156ae2ef922df9ddcdb8430b52d6e3d3bc483e1b16cd8d8ec7e51f",
+      "bytes": 31436034,
+      "fetched_at": "2026-10-27T05:02:08.830473+00:00"
+    },
+    {
+      "source": "moein",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/LICENSE",
+      "status": "downloaded",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092,
+      "fetched_at": "2026-10-27T05:01:47.350764+00:00"
+    },
+    {
+      "source": "moein",
+      "path": "moein/words.txt",
+      "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/moein/words.txt",
+      "resolved_url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/moein/words.txt",
+      "status": "downloaded",
+      "sha256": "7e08a2f8f788dfa297016d870e4cddc9da8ea4d5f02f643874f1ee357fd3ffac",
+      "bytes": 413920,
+      "fetched_at": "2026-10-27T05:01:47.499152+00:00"
+    },
+    {
+      "source": "moein",
+      "path": "moteradef-motezad/dictionary-words-only.txt",
+      "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/moteradef-motezad/dictionary-words-only.txt",
+      "resolved_url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/moteradef-motezad/dictionary-words-only.txt",
+      "status": "downloaded",
+      "sha256": "ce777a4a99cf3ae47a1c2227c6ca51970fd1be4669cedfd2d612fa075d79056f",
+      "bytes": 257928,
+      "fetched_at": "2026-10-27T05:01:47.656137+00:00"
+    },
+    {
+      "source": "multext",
+      "path": "wfl-fa.txt.gz",
+      "url": "https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1042/wfl-fa.txt.gz?sequence=5&isAllowed=n",
+      "resolved_url": "https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1042/wfl-fa.txt.gz?sequence=5&isAllowed=n",
+      "status": "unavailable",
+      "sha256": "de3d7baee2c511fd0fff0d44001decb9e2eddefccee80923ea1a4be2882a373d",
+      "bytes": 47569,
+      "fetched_at": "2026-10-27T05:02:07.803902+00:00",
+      "error": "Server returned HTML instead of data"
+    },
+    {
+      "source": "parsivar",
+      "path": "spell.zip",
+      "url": "https://www.dropbox.com/s/tlyvnzv1ha9y1kl/spell.zip?dl=1",
+      "resolved_url": "https://www.dropbox.com/s/tlyvnzv1ha9y1kl/spell.zip?dl=1",
+      "status": "downloaded",
+      "sha256": "d0c419ab5126a3287ed198c19dee43fa57dfa0eebbfcf87542996315fa4e1f77",
+      "bytes": 70129644,
+      "fetched_at": "2026-10-27T05:02:57.934679+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/ADJ.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/ADJ.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/ADJ.ilex",
+      "status": "downloaded",
+      "sha256": "5e3b255ddbc3c66cdd25f2cfaec384e3a628b1c944e931f10e46cad45b44f6bf",
+      "bytes": 517650,
+      "fetched_at": "2026-10-27T05:01:48.096258+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/ADV.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/ADV.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/ADV.ilex",
+      "status": "downloaded",
+      "sha256": "cbf9a16c5674213a102151fc15a9d045dfba49065ffc796448bd60cdcdce1fdb",
+      "bytes": 29860,
+      "fetched_at": "2026-10-27T05:01:48.149656+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/AR.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/AR.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/AR.ilex",
+      "status": "downloaded",
+      "sha256": "47f1da848005f008a28090218a302de0d1a747eec6bf88e323473f190b097678",
+      "bytes": 97338,
+      "fetched_at": "2026-10-27T05:01:48.494955+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/CON.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/CON.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/CON.ilex",
+      "status": "downloaded",
+      "sha256": "d0c832ec45029f580ebb1c001f62880e67150c4147be1ce98a46ca38cdce7bfb",
+      "bytes": 33323,
+      "fetched_at": "2026-10-27T05:01:48.474198+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/DELM.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/DELM.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/DELM.ilex",
+      "status": "downloaded",
+      "sha256": "cd9feaa4ae95133ffd697e5ae2a18b93231fc4b67f45dd6252ecd05290524d7d",
+      "bytes": 1128,
+      "fetched_at": "2026-10-27T05:01:48.738101+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/DET.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/DET.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/DET.ilex",
+      "status": "downloaded",
+      "sha256": "9b268bf49df56ff50d3c731f374b95d40096219094e720b947c2cf7150a7689b",
+      "bytes": 2131,
+      "fetched_at": "2026-10-27T05:01:48.799562+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/IF.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/IF.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/IF.ilex",
+      "status": "downloaded",
+      "sha256": "cb22dae1af4a24b5db766be2786de8adfd4dce5af175b3350f3571d02185c7c8",
+      "bytes": 1112,
+      "fetched_at": "2026-10-27T05:01:49.148587+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/INT.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/INT.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/INT.ilex",
+      "status": "downloaded",
+      "sha256": "0409c782b1e40221ee7f5532014282f66777ed0b7e235dc2e3ef6bebc05cd7f6",
+      "bytes": 1877,
+      "fetched_at": "2026-10-27T05:01:49.134016+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/MORP.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MORP.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MORP.ilex",
+      "status": "downloaded",
+      "sha256": "cd01d32accd15002a341e02787d134910b4fdb4fca69cfa5e8907060f5245297",
+      "bytes": 11779,
+      "fetched_at": "2026-10-27T05:01:49.450162+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/MQUA.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MQUA.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MQUA.ilex",
+      "status": "downloaded",
+      "sha256": "7f8dc7c5643fed7778fd78c5d186de511f25161f4e05b0dd8ecedf4e8859d23c",
+      "bytes": 689,
+      "fetched_at": "2026-10-27T05:01:49.447022+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/MS.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MS.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/MS.ilex",
+      "status": "downloaded",
+      "sha256": "d6ddfdd029320c616d6c3945db6f0e211487f41702694a82bd874e347fee11c0",
+      "bytes": 2269,
+      "fetched_at": "2026-10-27T05:01:49.818786+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/N.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/N.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/N.ilex",
+      "status": "downloaded",
+      "sha256": "84a58ac986bf8ff3540338068465bfdd3945f4e5b8a2ba3b45783e1a3947ea38",
+      "bytes": 630963,
+      "fetched_at": "2026-10-27T05:01:50.641687+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/NP.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/NP.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/NP.ilex",
+      "status": "downloaded",
+      "sha256": "7f5451153065420dbc9b0c131d5082a24bae44b38beec3ea0b3640ddd923c33f",
+      "bytes": 9477,
+      "fetched_at": "2026-10-27T05:01:50.117370+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/OH.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/OH.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/OH.ilex",
+      "status": "downloaded",
+      "sha256": "86ec7dfa708c80b2d8c7f6cf01afa60142ade3186ccc86226643b5038b9ce2fc",
+      "bytes": 1213,
+      "fetched_at": "2026-10-27T05:01:50.084563+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/OHH.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/OHH.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/OHH.ilex",
+      "status": "downloaded",
+      "sha256": "ac97cd90cb0912626d256f1f27f305620fa639b5834c1ca8abd371213fdbc5fc",
+      "bytes": 287,
+      "fetched_at": "2026-10-27T05:01:50.419978+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/P.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/P.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/P.ilex",
+      "status": "downloaded",
+      "sha256": "4b18de2b5065a54f30e301321c6c6f43a2b36a31a4bf1dd4edb0a0710bb82215",
+      "bytes": 18806,
+      "fetched_at": "2026-10-27T05:01:50.817817+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/PP.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PP.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PP.ilex",
+      "status": "downloaded",
+      "sha256": "349c45b0c5668e446205f230b41d199a1965a6ad9b3923c7163b3a8b22ef92d2",
+      "bytes": 6319,
+      "fetched_at": "2026-10-27T05:01:50.772250+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/PRO.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PRO.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PRO.ilex",
+      "status": "downloaded",
+      "sha256": "a6433baaef20ac1768d8935873c63a7c44ef360527b604ff2a958e9d77f47ec6",
+      "bytes": 11993,
+      "fetched_at": "2026-10-27T05:01:51.113530+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/PS.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PS.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/PS.ilex",
+      "status": "downloaded",
+      "sha256": "fa34ea0184eef075d6b79a19f1a83838472cf643d45217cf97a0f5e10f07cfd9",
+      "bytes": 2321,
+      "fetched_at": "2026-10-27T05:01:51.269699+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/QUA.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/QUA.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/QUA.ilex",
+      "status": "downloaded",
+      "sha256": "977c406118bc8d9b79a0634db9e69934c98f7dba593ef8ae71bfbdc747ae44a7",
+      "bytes": 6033,
+      "fetched_at": "2026-10-27T05:01:51.424388+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/SPEC.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/SPEC.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/SPEC.ilex",
+      "status": "downloaded",
+      "sha256": "e3f5686d7702ed9fc2e54395acfa9a529d7209a4bbebef17a830ae823806ef3e",
+      "bytes": 3429,
+      "fetched_at": "2026-10-27T05:01:51.451141+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/V.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/V.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/V.ilex",
+      "status": "downloaded",
+      "sha256": "1081b1e43827ced1a68fb1c75bc262e9a4cc6c1d657371d21f4d4ae1ac2efa14",
+      "bytes": 10763,
+      "fetched_at": "2026-10-27T05:01:51.573358+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/addons.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/addons.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/addons.ilex",
+      "status": "downloaded",
+      "sha256": "bed4524c072671bcecfa48c6a6f8b610b0ae798ed3b41a8ef5094a618e27b06e",
+      "bytes": 190,
+      "fetched_at": "2026-10-27T05:01:51.756074+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/cities.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/cities.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/cities.ilex",
+      "status": "downloaded",
+      "sha256": "5f5941be544d44d09b5aaf640ddad2b413afc98fcc85e950c1da775e1730f81b",
+      "bytes": 176457,
+      "fetched_at": "2026-10-27T05:01:52.244969+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/countries.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/countries.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/countries.ilex",
+      "status": "downloaded",
+      "sha256": "32cf3dd90c085df10f8f901b0b2692d5a849fa0e168fadcedc1717cf12808173",
+      "bytes": 9286,
+      "fetched_at": "2026-10-27T05:01:52.113207+00:00"
+    },
+    {
+      "source": "perlex",
+      "path": "persoarabic/person_names.ilex",
+      "url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/person_names.ilex",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/perlex_transliterator/8cd03038925f949c1f6a9391dfbcca8e51d114e7/persoarabic/person_names.ilex",
+      "status": "downloaded",
+      "sha256": "5aacfceb5a67d64cefa070507778bc861b4ac717efb339ebb98215a9e9f1de85",
+      "bytes": 513585,
+      "fetched_at": "2026-10-27T05:01:53.217478+00:00"
+    },
+    {
+      "source": "poetry",
+      "path": "rira-classic-poems.txt",
+      "url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/rira-classic-poems.txt",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/rira-classic-poems.txt",
+      "status": "downloaded",
+      "sha256": "d724e99d448a8c56b1f3b3c40994c87d66f8756da218d3b4b4018db66c90ae4b",
+      "bytes": 1931663,
+      "fetched_at": "2026-10-27T05:01:55.107562+00:00"
+    },
+    {
+      "source": "reza",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/README.md",
+      "status": "downloaded",
+      "sha256": "86b9180dfd42a08975162cf74eca974203467a04d6cb866d255e77ba7b144fcb",
+      "bytes": 961,
+      "fetched_at": "2026-10-27T05:01:42.056197+00:00"
+    },
+    {
+      "source": "reza",
+      "path": "fa_IR.aff",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/fa_IR.aff",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/fa_IR.aff",
+      "status": "downloaded",
+      "sha256": "d8eff09b6c0309ec6c66b8aca92a79901e1f75e06a47c132c0bb99efffc71f4b",
+      "bytes": 5108,
+      "fetched_at": "2026-10-27T05:01:41.730032+00:00"
+    },
+    {
+      "source": "reza",
+      "path": "fa_IR.dic",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/fa_IR.dic",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/fa_IR.dic",
+      "status": "downloaded",
+      "sha256": "ba3eb40dc9b04ae4431c8a0d802ed8da6bc893fb6167e1d37237568c7eecbf3a",
+      "bytes": 2444711,
+      "fetched_at": "2026-10-27T05:01:44.192015+00:00"
+    },
+    {
+      "source": "reza_corpus",
+      "path": "LT/کلمات+تکرار.txt",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/LT/%DA%A9%D9%84%D9%85%D8%A7%D8%AA%2B%D8%AA%DA%A9%D8%B1%D8%A7%D8%B1.txt",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/LT/%DA%A9%D9%84%D9%85%D8%A7%D8%AA%2B%D8%AA%DA%A9%D8%B1%D8%A7%D8%B1.txt",
+      "status": "downloaded",
+      "sha256": "1c8569e848c0236d2924a0c09717a7699d2f2ae4c838a98d15ae9b150a87f4ee",
+      "bytes": 1081773,
+      "fetched_at": "2026-10-27T05:01:45.614470+00:00"
+    },
+    {
+      "source": "reza_corpus",
+      "path": "Word_collection_1",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Word_collection_1",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Word_collection_1",
+      "status": "downloaded",
+      "sha256": "cbf96053598e0e15ba3dec6d826c6bfc1170d91595e14f1b23f5209943475a9e",
+      "bytes": 7041826,
+      "fetched_at": "2026-10-27T05:01:50.912886+00:00"
+    },
+    {
+      "source": "reza_lists",
+      "path": "Adjectives",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Adjectives",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Adjectives",
+      "status": "downloaded",
+      "sha256": "2d952d69fc0215715513f3217152375dab4edb6a7fa2e727a854a58778e13e39",
+      "bytes": 40178,
+      "fetched_at": "2026-10-27T05:01:42.060278+00:00"
+    },
+    {
+      "source": "reza_lists",
+      "path": "Moin_Key_Words",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Moin_Key_Words",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Moin_Key_Words",
+      "status": "downloaded",
+      "sha256": "49bf33dd2417dc697833d302d100bc0e9e31971ce58b4efea8d9e637bb831086",
+      "bytes": 297759,
+      "fetched_at": "2026-10-27T05:01:43.016125+00:00"
+    },
+    {
+      "source": "reza_lists",
+      "path": "Persian Verbs List",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Persian%20Verbs%20List",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Persian%20Verbs%20List",
+      "status": "downloaded",
+      "sha256": "2b96d26723575ddec30c6079e5c25f25c1d977e3f2dc6a47bbd4c42cbea83b10",
+      "bytes": 542343,
+      "fetched_at": "2026-10-27T05:01:43.533321+00:00"
+    },
+    {
+      "source": "reza_lists",
+      "path": "PersianWordsWithA.txt",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/PersianWordsWithA.txt",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/PersianWordsWithA.txt",
+      "status": "downloaded",
+      "sha256": "2651fcf20c967b2f291574b3ec2c77b2eae0819cdac9b7bb846d949f811dc73d",
+      "bytes": 38882,
+      "fetched_at": "2026-10-27T05:01:42.842330+00:00"
+    },
+    {
+      "source": "reza_lists",
+      "path": "Words with أ",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A3",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A3",
+      "status": "downloaded",
+      "sha256": "8fd3fa41e94311039d5cce3d696f4e5e7c855bd736b0dfb6a34a3b6cf78bbb66",
+      "bytes": 4549,
+      "fetched_at": "2026-10-27T05:01:43.499790+00:00"
+    },
+    {
+      "source": "reza_lists",
+      "path": "Words with ؤ",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A4",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A4",
+      "status": "downloaded",
+      "sha256": "82927f7782a0ebe4c7e81e4978aff10157f9d26b6cf7ce0c15e7e5aaf4a7bb7f",
+      "bytes": 187,
+      "fetched_at": "2026-10-27T05:01:43.775321+00:00"
+    },
+    {
+      "source": "reza_slang",
+      "path": "Slangy persian verbs.txt",
+      "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Slangy%20persian%20verbs.txt",
+      "resolved_url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Slangy%20persian%20verbs.txt",
+      "status": "downloaded",
+      "sha256": "12921a44e8339d28374e0498a9dfbb4ccc74f36d83e01f1e3cd95358db9a41b2",
+      "bytes": 2937,
+      "fetched_at": "2026-10-27T05:01:44.459895+00:00"
+    },
+    {
+      "source": "subtitles",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/525f9b560de45753a5ea01069454e72e9aa541c6/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/525f9b560de45753a5ea01069454e72e9aa541c6/README.md",
+      "status": "downloaded",
+      "sha256": "a92fcc50e27f7b2d5860ec1c1ce794dc4c892d945bfa4c8c3136cdfd213ee710",
+      "bytes": 913,
+      "fetched_at": "2026-10-27T05:01:52.487257+00:00"
+    },
+    {
+      "source": "subtitles",
+      "path": "content/2018/fa/fa_full.txt",
+      "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/525f9b560de45753a5ea01069454e72e9aa541c6/content/2018/fa/fa_full.txt",
+      "resolved_url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/525f9b560de45753a5ea01069454e72e9aa541c6/content/2018/fa/fa_full.txt",
+      "status": "downloaded",
+      "sha256": "e46be953c3a0b3db74ea307c6f6a21ce2c72217bde0ab1d79b3809209ab52501",
+      "bytes": 7231872,
+      "fetched_at": "2026-10-27T05:01:58.913071+00:00"
+    },
+    {
+      "source": "udlexicons",
+      "path": "udlexicons.zip",
+      "url": "https://atoll.inria.fr/~sagot/UDLexicons.0.2.zip",
+      "resolved_url": "https://pauillac.inria.fr/~sagot/UDLexicons.0.2.zip",
+      "status": "downloaded",
+      "sha256": "21d2c1c6b6152f30780d2921f9431ed8723b18ba0cd021bc11e3989f769fddab",
+      "bytes": 309641647,
+      "fetched_at": "2026-10-27T05:11:07.647954+00:00"
+    },
+    {
+      "source": "upc",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/samanvp/persian-lexicon/93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/samanvp/persian-lexicon/93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6/LICENSE",
+      "status": "downloaded",
+      "sha256": "0ad43e4c74c23787f38f05d9e79103a4af48a1a9a014df979b6ef551fb8791f9",
+      "bytes": 1072,
+      "fetched_at": "2026-10-27T05:01:45.700621+00:00"
+    },
+    {
+      "source": "upc",
+      "path": "data/persian-words.txt",
+      "url": "https://raw.githubusercontent.com/samanvp/persian-lexicon/93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6/data/persian-words.txt",
+      "resolved_url": "https://raw.githubusercontent.com/samanvp/persian-lexicon/93e1b70264fd1fdadf4397aa2a5dc5b95a7300d6/data/persian-words.txt",
+      "status": "downloaded",
+      "sha256": "91117dea38e6e965f88fa40ca7a26091288d508e8a0a9b7bc5c71e3c482b9a6e",
+      "bytes": 1090549,
+      "fetched_at": "2026-10-27T05:01:46.469470+00:00"
+    },
+    {
+      "source": "virastyar",
+      "path": "persian.dic",
+      "url": "https://sourceforge.net/projects/virastyar/files/Data/1.3.1/persian.dic/download",
+      "resolved_url": "https://sourceforge.net/projects/virastyar/files/Data/1.3.1/persian.dic/download",
+      "status": "downloaded",
+      "sha256": "910b176e957c30907c07187249f97f6d0cbf38d35c5287011c0eca0e3a8c0645",
+      "bytes": 1036925,
+      "fetched_at": "2026-10-27T05:02:05.418214+00:00"
+    },
+    {
+      "source": "wikipedia",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/README.md",
+      "status": "downloaded",
+      "sha256": "f9c5cec97feddd057f7a95527c4e26d18f42608736d87e9a7ba587bc89aad8b6",
+      "bytes": 727,
+      "fetched_at": "2026-10-27T05:01:52.892013+00:00"
+    },
+    {
+      "source": "wikipedia",
+      "path": "persian-wikipedia.txt",
+      "url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/persian-wikipedia.txt",
+      "resolved_url": "https://raw.githubusercontent.com/behnam/persian-words-frequency/c08d07f6817d2ba589f5d7287abcc3fcc5027c99/persian-wikipedia.txt",
+      "status": "downloaded",
+      "sha256": "05e91f5ae20a7dda6cb260b41afc59d45e0ff881706f9add5b719a43f5c1fc3d",
+      "bytes": 7111364,
+      "fetched_at": "2026-10-27T05:01:59.988679+00:00"
+    },
+    {
+      "source": "word_list_fa",
+      "path": "license",
+      "url": "https://raw.githubusercontent.com/mvalipour/word-list-fa/7e24c4fae0abd243b1cc7429c921d96e9f226409/license",
+      "resolved_url": "https://raw.githubusercontent.com/mvalipour/word-list-fa/7e24c4fae0abd243b1cc7429c921d96e9f226409/license",
+      "status": "downloaded",
+      "sha256": "b497b314602367f201cc6da268cf1afbfe69870834cdbc40390f8273f123390c",
+      "bytes": 1277,
+      "fetched_at": "2026-10-27T05:01:46.363215+00:00"
+    },
+    {
+      "source": "word_list_fa",
+      "path": "words.txt",
+      "url": "https://raw.githubusercontent.com/mvalipour/word-list-fa/7e24c4fae0abd243b1cc7429c921d96e9f226409/words.txt",
+      "resolved_url": "https://raw.githubusercontent.com/mvalipour/word-list-fa/7e24c4fae0abd243b1cc7429c921d96e9f226409/words.txt",
+      "status": "downloaded",
+      "sha256": "e3c31ee85bad269a779abdd4e47dec7998fbd7e994d836cf930aac25b71bc73f",
+      "bytes": 74452,
+      "fetched_at": "2026-10-27T05:01:46.538628+00:00"
+    },
+    {
+      "source": "wordfreq",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/rspeer/wordfreq/912caf64b657478d1dff1138efdc078947d54bb1/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/rspeer/wordfreq/912caf64b657478d1dff1138efdc078947d54bb1/README.md",
+      "status": "downloaded",
+      "sha256": "0f1db058e1df2e6bda2db5d0ea851a7111d2390ec16a9939d971ef53ea24f684",
+      "bytes": 27642,
+      "fetched_at": "2026-10-27T05:01:54.017998+00:00"
+    },
+    {
+      "source": "wordfreq",
+      "path": "wordfreq/data/small_fa.msgpack.gz",
+      "url": "https://raw.githubusercontent.com/rspeer/wordfreq/912caf64b657478d1dff1138efdc078947d54bb1/wordfreq/data/small_fa.msgpack.gz",
+      "resolved_url": "https://raw.githubusercontent.com/rspeer/wordfreq/912caf64b657478d1dff1138efdc078947d54bb1/wordfreq/data/small_fa.msgpack.gz",
+      "status": "downloaded",
+      "sha256": "bfb503f6b0d6bdddce720ee8154faf1c79d8b0417e6c865643da3b17b7638057",
+      "bytes": 147747,
+      "fetched_at": "2026-10-27T05:01:54.088346+00:00"
+    }
+  ]
+}

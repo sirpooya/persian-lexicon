@@ -6,7 +6,7 @@
       "name": "Lilak lexicon and user words",
       "repo": "b00f/lilak",
       "revision": "4f1f426113e764ea099865232fd5e0fa34563c60",
-      "family": "community_spell",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "lilak",
       "files": [
@@ -37,7 +37,7 @@
       "name": "Lilak Hunspell stems",
       "repo": "wooorm/dictionaries",
       "revision": "8cfea406b505e4d7df52d5a19bce525df98c54ab",
-      "family": "community_spell",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "hunspell",
       "files": [
@@ -61,7 +61,7 @@
       "name": "PersianWordsLib",
       "repo": "masoudnk/PersianWordsLib",
       "revision": "5dd86e541aca93cd75edbcdacca4901f1ab709bd",
-      "family": "mnk",
+      "family": "large_collections",
       "role": "collection",
       "parser": "mnk",
       "files": [
@@ -88,7 +88,7 @@
       "name": "Hazm vocabulary",
       "repo": "roshan-research/hazm",
       "revision": "a399c8293c5165544aaef76ead78bda9f4275888",
-      "family": "hazm_virastyar",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "hazm",
       "files": [
@@ -119,7 +119,7 @@
       "name": "Persian-Spell-checker stems",
       "repo": "reza1615/Persian-Spell-checker",
       "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
-      "family": "community_spell",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "hunspell",
       "files": [
@@ -143,7 +143,7 @@
       "name": "Persian-Spell-checker auxiliary lists",
       "repo": "reza1615/Persian-Spell-checker",
       "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
-      "family": "community_spell",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "lines",
       "files": [
@@ -171,14 +171,15 @@
           "path": "Words with ؤ",
           "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Words%20with%20%D8%A4"
         }
-      ]
+      ],
+      "notes": " Conservatively grouped with legacy spell lists because Reza includes Moin headwords and Lilak credits Reza."
     },
     {
       "id": "reza_corpus",
       "name": "Persian-Spell-checker corpus words",
       "repo": "reza1615/Persian-Spell-checker",
       "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
-      "family": "wikipedia_news",
+      "family": "legacy_spell",
       "role": "frequency",
       "parser": "reza_corpus",
       "files": [
@@ -190,7 +191,8 @@
           "path": "LT/کلمات+تکرار.txt",
           "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/LT/%DA%A9%D9%84%D9%85%D8%A7%D8%AA%2B%D8%AA%DA%A9%D8%B1%D8%A7%D8%B1.txt"
         }
-      ]
+      ],
+      "notes": "Word_collection_1 includes generated forms; LT counts overlap Virastyar/Hazm."
     },
     {
       "id": "reza_slang",
@@ -199,13 +201,14 @@
       "revision": "1adf3d5702ace1ebe0352fbb94bc4537e5ab2707",
       "family": "community_spell",
       "role": "colloquial",
-      "parser": "lines",
+      "parser": "regex_resource",
       "files": [
         {
           "path": "Slangy persian verbs.txt",
           "url": "https://raw.githubusercontent.com/reza1615/Persian-Spell-checker/1adf3d5702ace1ebe0352fbb94bc4537e5ab2707/Slangy%20persian%20verbs.txt"
         }
-      ]
+      ],
+      "notes": "Regex descriptions, not an enumerated word list; retained as reference data."
     },
     {
       "id": "apertium",
@@ -270,7 +273,7 @@
       "name": "Moein headwords and synonyms headwords",
       "repo": "MansourM/persian-to-persian-dictionary",
       "revision": "c3314011ec70e651adb38f3e98474f6614d5de04",
-      "family": "moein",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "lines",
       "files": [
@@ -286,7 +289,8 @@
           "path": "LICENSE",
           "url": "https://raw.githubusercontent.com/MansourM/persian-to-persian-dictionary/c3314011ec70e651adb38f3e98474f6614d5de04/LICENSE"
         }
-      ]
+      ],
+      "notes": " Conservatively grouped with legacy spell lists because Reza includes Moin headwords and Lilak credits Reza."
     },
     {
       "id": "perlex",
@@ -503,7 +507,7 @@
       "name": "Persian wordlist SQL",
       "repo": "masterking32/persian-wordlist",
       "revision": "d0e3d9819caaee99143d94e77a65ae41403e7fef",
-      "family": "masterking",
+      "family": "large_collections",
       "role": "collection",
       "parser": "sql",
       "files": [
@@ -536,7 +540,7 @@
     {
       "id": "virastyar",
       "name": "Virastyar dictionary 1.3.1",
-      "family": "hazm_virastyar",
+      "family": "legacy_spell",
       "role": "lexical",
       "parser": "virastyar",
       "files": [
@@ -587,7 +591,10 @@
       "files": [
         {
           "path": "udlexicons.zip",
-          "url": "https://atoll.inria.fr/~sagot/UDLexicons.0.2.zip"
+          "url": "https://atoll.inria.fr/~sagot/UDLexicons.0.2.zip",
+          "mirrors": [
+            "https://pauillac.inria.fr/~sagot/UDLexicons.0.2.zip"
+          ]
         }
       ]
     },
@@ -602,7 +609,8 @@
           "path": "wfl-fa.txt.gz",
           "url": "https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1042/wfl-fa.txt.gz?sequence=5&isAllowed=n"
         }
-      ]
+      ],
+      "notes": "Download endpoint returned an HTML page; alternate official vault returned HTTP 401. Data unavailable without repository access."
     }
   ],
   "unresolved_leads": [

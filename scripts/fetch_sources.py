@@ -22,6 +22,16 @@ def digest(path: Path) -> str:
     return h.hexdigest()
 
 
+def validate_download(path: Path, suffix: str) -> None:
+    with path.open('rb') as stream:
+        prefix = stream.read(1024).lstrip().lower()
+    if (b'<!doctype html' in prefix or b'<html' in prefix) and suffix not in ('.htm', '.html'):
+        raise ValueError('Server returned HTML instead of data')
+    magic = {'.gz': b'\x1f\x8b', '.zip': b'pk\x03\x04', '.bz2': b'bzh'}
+    if suffix in magic and not prefix.startswith(magic[suffix]):
+        raise ValueError('Invalid archive signature')
+
+
 def fetch_one(source: dict, item: dict, prior: dict) -> dict:
     relative = Path(item['path'])
     if relative.is_absolute() or '..' in relative.parts:
@@ -31,23 +41,23 @@ def fetch_one(source: dict, item: dict, prior: dict) -> dict:
     record = {'source': source['id'], 'path': item['path'], 'url': item['url']}
     expected = prior.get('sha256')
     if target.is_file() and expected and digest(target) == expected:
-        return {**prior, **record, 'status': 'downloaded'}
+        try:
+            validate_download(target, relative.suffix)
+            return {**prior, **record, 'status': 'downloaded'}
+        except ValueError as error:
+            return {**prior, **record, 'status': 'unavailable', 'error': str(error)}
     temporary = target.with_name(target.name + '.part')
     failures = []
     for url in [item['url'], *item.get('mirrors', [])]:
         command = ['curl', '--fail', '--location', '--silent', '--show-error',
-                   '--retry', '2', '--connect-timeout', '20', '--max-time', '240',
+                   '--retry', '2', '--connect-timeout', '20', '--max-time', '1800',
                    '--proto', '=https', '--proto-redir', '=https', url, '-o', str(temporary)]
         try:
-            process = subprocess.run(command, capture_output=True, text=True, timeout=760)
+            process = subprocess.run(command, capture_output=True, text=True, timeout=5500)
             if process.returncode:
                 failures.append(process.stderr.strip()[-400:])
                 continue
-            with temporary.open('rb') as stream:
-                prefix = stream.read(1024).lstrip().lower()
-            if (prefix.startswith(b'<!doctype html') or prefix.startswith(b'<html')) and relative.suffix not in ['.html', '.htm']:
-                failures.append('Server returned HTML instead of the requested data')
-                continue
+            validate_download(temporary, relative.suffix)
             actual = digest(temporary)
             if expected and actual != expected:
                 failures.append('SHA-256 changed; refusing to replace the locked snapshot')
@@ -56,7 +66,7 @@ def fetch_one(source: dict, item: dict, prior: dict) -> dict:
             return {**record, 'resolved_url': url, 'status': 'downloaded', 'sha256': actual,
                     'bytes': target.stat().st_size,
                     'fetched_at': datetime.now(timezone.utc).isoformat()}
-        except (OSError, subprocess.TimeoutExpired) as error:
+        except (OSError, ValueError, subprocess.TimeoutExpired) as error:
             failures.append(str(error))
     if temporary.exists():
         temporary.unlink()
