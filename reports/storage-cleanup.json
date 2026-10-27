@@ -1,0 +1,23 @@
+{
+  "autocorrect_release_url": "https://github.com/sirpooya/persian-lexicon/releases/tag/persian-autocorrect-2026.10.27",
+  "autocorrect_sha256": "02857dc341cec338a58c28957219aa3abee1a71e29c6518e3135047295b5cb45",
+  "release_url": "https://github.com/sirpooya/persian-lexicon/releases/tag/v0.1.0",
+  "archive_sha256": "97a75e5c76b7a1d40c8d1d3615d3a207a5448869397a8d5e481d12358813af6d",
+  "verified_download": true,
+  "folder_bytes_before_release_staging": 2283717349,
+  "folder_bytes_after_cleanup": 153844081,
+  "bytes_reclaimed": 2129873268,
+  "removed_local_export_files": 16,
+  "retained_generated_files": [
+    "dist/build-report.json",
+    "dist/overrides.tsv",
+    "dist/persian-all.tsv",
+    "dist/persian-autocorrect.stats.json",
+    "dist/persian-autocorrect.tsv",
+    "dist/persian-autocorrect.tsv.sha256",
+    "dist/release-inventory.json",
+    "dist/review-priority.tsv",
+    "dist/sources.json",
+    "dist/sources.lock.json"
+  ]
+}
