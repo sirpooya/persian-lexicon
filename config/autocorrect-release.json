@@ -1,0 +1,12 @@
+{
+  "tag": "persian-autocorrect-2026.10.27",
+  "repository": "sirpooya/persian-lexicon",
+  "asset_url": "https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv",
+  "checksum_url": "https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv.sha256",
+  "sha256": "02857dc341cec338a58c28957219aa3abee1a71e29c6518e3135047295b5cb45",
+  "rows": 483190,
+  "word_rows": 482560,
+  "char_rows": 630,
+  "bytes": 28163978,
+  "source_lexicon_commit": "45cadaae5add841949e175d6959e8025e80cf388"
+}

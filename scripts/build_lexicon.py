@@ -19,6 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_sources import digest, validate_download
 from lexicon_core import ROOT, ZWNJ, normalize, records, spacing_key
+from autocorrect import export_autocorrect
 
 ORIGINS = {'lexical': 1, 'generated': 2, 'frequency': 4,
            'collection': 8, 'name': 16, 'colloquial': 32}
@@ -227,6 +228,11 @@ def export(db, folder):
             for (word,) in db.execute('SELECT word FROM entries WHERE ' + condition + ' ORDER BY word'):
                 stream.write(word + '\n')
         (folder / (name + '.aff')).write_text(affix, encoding='utf-8')
+    autocorrect = export_autocorrect(db, folder)
+    counts['autocorrect_rows'] = autocorrect['rows']
+    counts['autocorrect_word_rows'] = autocorrect['word_rows']
+    counts['autocorrect_char_rows'] = autocorrect['char_rows']
+    counts['autocorrect_bytes'] = autocorrect['bytes']
     return dict(counts)
 
 

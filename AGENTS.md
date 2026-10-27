@@ -10,9 +10,24 @@ coverage: the number of real words. The first consumer is osx-transcribeX's Dict
 - 2026-10-27: The user authorized building the combined dictionary from all available
   sources. The pipeline is implemented in `scripts/`, with pinned source configuration
   in `config/sources.json` and SHA-256 download records in `config/sources.lock.json`.
-- Raw snapshots are in gitignored `data/raw/`. The combined exports, SQLite evidence
-  database, review tables and measured source contributions are in gitignored `dist/`.
-  `dist/build-report.json` is the authoritative record of each build's counts and omissions.
+- Raw downloads use gitignored `data/raw/` as a disposable cache. Complete exports
+  are published in GitHub Release `v0.1.0`; `config/release.json` records the asset
+  URL and SHA-256. Restore that ZIP before running full export verification.
+- The lightweight local layout keeps `dist/persian-all.tsv`, `dist/review-priority.tsv`
+  plus `dist/persian-autocorrect.tsv`, its checksum/statistics and small metadata.
+  The raw cache, SQLite database and other large generated formats
+  are removed locally only after verifying the uploaded release. `dist/build-report.json`
+  remains the authoritative record of build counts and omissions. See README for restore commands.
+- `scripts/autocorrect.py` exports an app-independent UTF-8 correction table with
+  exactly `from`, `to`, `match` columns. Character rows are literal normalization;
+  word rows restore ZWNJ only, for core/dictionary single-token targets. Existing
+  supported words and phrases are never emitted as word inputs. Multiple possible
+  targets choose highest frequency, with deterministic support/spelling tie breaks.
+- The 2026-10-27 autocorrect table has 483,190 rows (630 char, 482,560 word),
+  28,163,978 bytes. It is published separately at tag `persian-autocorrect-2026.10.27`.
+  `config/autocorrect-release.json` records its checksum and download URLs.
+  `export_autocorrect.py` regenerates from SQLite; `verify_build.py` checks its
+  validity, completeness, protection rules, ordering, size and checksum.
 - First combined build: 2,852,812 normalized entries (2,696,928 single tokens and
   155,884 phrases), with 570,457 dictionary-supported single tokens and 46,027 core
   tokens. Broad coverage includes candidates; these numbers are not counts of verified

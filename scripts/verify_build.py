@@ -11,6 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_sources import digest
 from lexicon_core import ROOT, normalize
+from autocorrect import verify_autocorrect
 
 
 def main():
@@ -37,6 +38,7 @@ def main():
     assert db.execute('SELECT count(*) FROM entries').fetchone()[0] == report['counts']['all_entries']
     assert db.execute('''SELECT count(*) FROM evidence e LEFT JOIN entries w ON w.word=e.word
                          WHERE w.word IS NULL''').fetchone()[0] == 0
+    verify_autocorrect(db, folder)
     for name, key in [('persian', 'core_tokens'), ('persian-all', 'single_tokens')]:
         with (folder / (name + '.dic')).open(encoding='utf-8') as stream:
             declared = int(next(stream))

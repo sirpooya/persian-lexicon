@@ -14,9 +14,84 @@ The database retains 6,625,012 source-evidence rows and 549,913 changed spelling
 variants. The review contains 83,709 spacing groups; the priority file shows the
 first 500. These are measured build counts, not estimates of error-free vocabulary.
 
+## Download the full build
+
+For an application that only needs literal corrections, download
+[persian-autocorrect.tsv](https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv)
+and its [SHA-256 file](https://github.com/sirpooya/persian-lexicon/releases/download/persian-autocorrect-2026.10.27/persian-autocorrect.tsv.sha256).
+The dated autocorrect release is separate from the original full-build ZIP below.
+
+The complete build is published as
+[persian-lexicon-v0.1.0.zip](https://github.com/sirpooya/persian-lexicon/releases/download/v0.1.0/persian-lexicon-v0.1.0.zip)
+on [GitHub Releases](https://github.com/sirpooya/persian-lexicon/releases/tag/v0.1.0).
+It includes every generated format, the full SQLite evidence database, review tables,
+evaluation outputs, source notices and a file inventory with SHA-256 hashes.
+Release metadata and the ZIP hash are recorded in `config/release.json`.
+
+The lightweight local layout keeps `dist/persian-all.tsv`, `dist/review-priority.tsv`,
+the autocorrect TSV/checksum/statistics and small build metadata. Raw download caches and other large exports are removed
+after the release is uploaded and verified. A normal Git clone contains code,
+configuration, documentation and small reports; generated dictionaries are downloaded
+separately. `.venv/` is a local dependency environment.
+
+To restore every export, run these commands from the repository root:
+
+```sh
+gh release download v0.1.0 --repo sirpooya/persian-lexicon --pattern persian-lexicon-v0.1.0.zip --pattern SHA256SUMS.txt --dir /tmp/persian-lexicon-v0.1.0
+(cd /tmp/persian-lexicon-v0.1.0 && shasum -a 256 -c SHA256SUMS.txt)
+unzip -o /tmp/persian-lexicon-v0.1.0/persian-lexicon-v0.1.0.zip
+```
+
+Restoring the ZIP recreates the complete `dist/` directory and uses about 1.2 GiB.
+`verify_build.py` requires those complete exports. Rebuilding also requires fetching
+raw sources again; their caches are not in the release bundle.
+The original ZIP predates the autocorrect export. After restoring it, run
+`.venv/bin/python -I scripts/export_autocorrect.py` to add that table and refresh
+the build report before running the current verifier.
+
+## Plain autocorrect table
+
+`dist/persian-autocorrect.tsv` is UTF-8 with exactly `from`, `to`, `match` columns.
+Every correction is a literal row; consumers need no Persian morphology rules.
+The current table has 483,190 rows (630 character rules and 482,560 word rules),
+occupying 28,163,978 bytes.
+
+- `char`: replace the literal input anywhere. Character normalization comes first:
+  Arabic ي/ى/ك, tatweel, vowel marks, supported presentation forms, canonical
+  base-plus-mark sequences and existing disposable formatting controls. ZWNJ is
+  preserved. ZWJ is not deleted globally because it also joins emoji sequences.
+- `word`: replace only a complete word or complete space-separated span, bounded
+  by Unicode word boundaries (treat internal ZWNJ as part of a word). Every target
+  is a single token with lexical support and at least one ZWNJ. Variants independently
+  retain, space, or omit each joiner, covering partially incorrect multi-joiner forms.
+- Inputs that already have lexical support as words or phrases are protected.
+  Thus the supported spelling `میزنیم` is deliberately skipped even though
+  `می‌زنیم` is also supported. `لباس تر` has no emitted correction.
+- There are no duplicate inputs. Conflicts choose the highest-frequency target;
+  ties use lexical-family support, source count, then target spelling. Word rows
+  are ordered by descending target `frequency_score`; character rules precede them.
+
+Read TSV fields literally, including an empty `to` field for character deletion.
+Apply the character rows in their listed order, then match word rows as literal
+whole spans. Word rules only restore half-spaces; they never remove an existing
+one or change letters. No unlisted replacement is required by this format.
+
+The table is generated during a full build. To regenerate it from a restored
+SQLite database without downloading the raw sources:
+
+```sh
+.venv/bin/python -I scripts/export_autocorrect.py
+.venv/bin/python -I scripts/verify_build.py
+```
+
+The verifier checks all eligible variants, protected inputs, supported targets,
+unique inputs, frequency ordering, file size and checksum, and prints the row count.
+Publication metadata is recorded in `config/autocorrect-release.json`.
+
 ## Generated files
 
-Completed files live in `dist/`, which is excluded from Git:
+Completed files are packaged under `dist/`, which is excluded from Git. Most are
+release downloads rather than files retained in the lightweight local layout:
 
 | File | Contents |
 |---|---|
@@ -28,6 +103,9 @@ Completed files live in `dist/`, which is excluded from Git:
 | `phrases.tsv` | Multiword entries, kept out of the Hunspell files |
 | `lexicon.sqlite` | Entries, source evidence, original counts, normalized variants and user decisions |
 | `persian-all.jsonl.gz` | Compressed entry summaries |
+| `persian-autocorrect.tsv` | Literal character and whole-word correction table |
+| `persian-autocorrect.tsv.sha256` | SHA-256 of the autocorrect TSV |
+| `persian-autocorrect.stats.json` | Autocorrect row counts, size and generation policy |
 | `review.tsv` | Observed spacing variants grouped for comparison |
 | `review-priority.tsv` | First 500 spacing groups, ordered by frequency score |
 | `rejected.jsonl.gz` | Rejected observations and reasons |

@@ -1,0 +1,26 @@
+{
+  "tag": "v0.1.0",
+  "source_commit": "45cadaae5add841949e175d6959e8025e80cf388",
+  "archive": "persian-lexicon-v0.1.0.zip",
+  "sha256": "97a75e5c76b7a1d40c8d1d3615d3a207a5448869397a8d5e481d12358813af6d",
+  "bytes": 256696126,
+  "build_files": 22,
+  "archived_files": 43,
+  "url": "https://github.com/sirpooya/persian-lexicon/releases/download/v0.1.0/persian-lexicon-v0.1.0.zip",
+  "repository": "sirpooya/persian-lexicon",
+  "release_url": "https://github.com/sirpooya/persian-lexicon/releases/tag/v0.1.0",
+  "checksum_url": "https://github.com/sirpooya/persian-lexicon/releases/download/v0.1.0/SHA256SUMS.txt",
+  "local_keep": [
+    "dist/persian-all.tsv",
+    "dist/review-priority.tsv",
+    "dist/build-report.json",
+    "dist/sources.json",
+    "dist/sources.lock.json",
+    "dist/overrides.tsv",
+    "dist/release-inventory.json",
+    "dist/persian-autocorrect.tsv",
+    "dist/persian-autocorrect.tsv.sha256",
+    "dist/persian-autocorrect.stats.json"
+  ],
+  "github_asset_id": 680897918
+}
